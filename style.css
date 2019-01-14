@@ -1,0 +1,145 @@
+body {
+    font-family: sans-serif;
+}
+
+.root-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    transition: opacity 0.8s ease-in;
+    margin-top: -3rem;
+}
+
+.switch-button {
+    border: none;
+    margin-bottom: 0.7rem;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.switch-button img {
+    width: 4rem;
+}
+
+.button-container label {
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0.3rem;
+    text-align: center; 
+}
+
+#game-board {
+    height: 33rem;
+    width: 35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-game {
+    transform: rotate(0deg);
+    transition: transform 2s;
+}
+
+.second-game {
+    transform: rotate(90deg); 
+    transition: transform 2s;
+}
+
+.third-game {
+    transform: rotate(180deg);
+    transition: transform 2s;
+}
+
+.fourth-game {
+    transform: rotate(270deg);
+    transition: transform 2s;
+}
+
+.information-container {
+    position: relative;
+    width: 35rem;
+    opacity: 1;
+    transition: opacity 0.8s ease-in;
+}
+
+.text-container {
+    width: 35rem;
+    position: absolute;
+    display: none;
+}
+
+.text-container h2 {
+    font-size: 0.8rem;
+    letter-spacing: 0.15rem;
+    padding-bottom: 1rem;
+    margin: 1rem 0 0 0;
+    border-bottom: 1px solid #c7c7c7;
+}
+
+.subtext-container p {
+    display: inline-block;
+    font-size: 0.8rem;
+    letter-spacing: 0.15rem;
+}
+
+.flash {
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+canvas {
+	min-width: 392px;
+	background: none;
+}
+
+.div {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#game-one {
+    position: absolute;
+    z-index: 4;
+}
+
+#game-two {
+	position: absolute;
+    transform: rotate(270deg);
+    z-index: 3;
+}
+
+#game-three {
+	position: absolute;
+    transform: rotate(180deg);
+    z-index: 2;
+}
+
+#game-four {
+	position: absolute;
+    transform: rotate(90deg);
+    z-index: 1;
+}
+
+#game-board .top-game {
+    z-index: 5;
+}
+
+.show-text {
+    display: inherit;
+}

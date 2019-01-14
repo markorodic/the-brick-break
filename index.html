@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="script.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="root-container">
+            <div class="button-container">
+                <button onclick="switchBoard()" class="switch-button">
+                    <img src="images/switch-icon.svg"/>
+                </button>
+                <label>SWITCH</label>
+            </div>
+            <div id="game-board" class="first-game">
+                            <canvas id='game-one' class='top-game' width="500" height="500"></canvas>
+                            <canvas id='game-two' width="500" height="500"></canvas>
+                            <canvas id='game-three' width="500" height="500"></canvas>
+                            <canvas id='game-four' width="500" height="500"></canvas>
+            </div>
+            <div class="information-container">
+                <div class="text-container text-one show-text">
+                    <h2>VANILLA JAVASCRIPT</h2>
+                    <div class="subtext-container">
+                        <p>PERFORMANCE:</p>
+                        <p>224ms</p>
+                    </div>
+                </div>
+                <div class="text-container text-two">
+                    <h2>FUNCTIONAL JAVASCRIPT</h2>
+                    <div class="subtext-container">
+                        <p>PERFORMANCE:</p>
+                        <p>392ms</p>
+                    </div>
+                </div>
+                <div class="text-container text-three">
+                    <h2>ES6 JAVASCRIPT</h2>
+                    <div class="subtext-container">
+                        <p>PERFORMANCE:</p>
+                        <p>431ms</p>
+                    </div>
+                </div>
+                <div class="text-container text-four">
+                    <h2>ELM</h2>
+                    <div class="subtext-container">
+                        <p>PERFORMANCE:</p>
+                        <p>852ms</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="js/Main.js"></script>
+    <script type="text/javascript" src="js/Game.js"></script>
+    <script type="text/javascript" src="js/Ball.js"></script>
+    <script type="text/javascript" src="js/Bricks.js"></script>
+    <script type="text/javascript" src="js/Collisions.js"></script>
+    <script type="text/javascript" src="js/Constants.js"></script>
+    <script type="text/javascript" src="js/Draw.js"></script>
+    <script type="text/javascript" src="js/KeyboardInput.js"></script>
+    <script type="text/javascript" src="js/Paddle.js"></script>
+    <script type="text/javascript" src="js/Colours.js"></script>
+</html>
+    
