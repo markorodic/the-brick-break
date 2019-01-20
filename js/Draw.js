@@ -1,6 +1,10 @@
 var drawToScreen = {
   drawRect: function(ctx, body, colour) {
-    ctx.fillStyle = colour;
+    if (body.shouldBeVisible) {
+      ctx.fillStyle = colour;
+    } else {
+      ctx.fillStyle = "rgba(0, 0, 200, 0)";
+    }
     ctx.fillRect(
       body.position.x - body.size.x / 2,
       body.position.y - body.size.y / 2,
@@ -8,24 +12,20 @@ var drawToScreen = {
       body.size.y
     );
   },
-  drawGap: function(ctx) {
-    ctx.fillStyle = "black";
-    ctx.fillRect(0, 55, 392, 15);
-  },
-  drawText: function(ctx, variable, left, top) {
-    ctx.fillStyle = "white";
-    ctx.fillText(variable, left, top);
-    ctx.font = '42px "Press Start 2P"';
-  },
-  drawBricks: function(game, themeColour) {
+  drawBricks: function(game, themeColour, mainEntity) {
+    // const bricksShouldBeVisible = entity === "bricks";
     var bricks = [];
     for (var i = 0; i < 196; i++) {
       var xMultiple = i % 14;
       var yMultiple = Math.floor(i / 14);
       var x = 29 * xMultiple + 61;
       var y = 29 * yMultiple + 61;
+      // if (bricksShouldBeVisible) {
       var colour = whichColour(yMultiple, themeColour);
-      bricks.push(new Brick(game, { x: x, y: y }, colour));
+      // } else {
+      //   colour = "rgba(0, 0, 200, 0)";
+      // }
+      bricks.push(new Brick(game, { x: x, y: y }, colour, mainEntity));
     }
     return bricks;
   }

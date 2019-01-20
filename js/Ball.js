@@ -1,9 +1,10 @@
-var Ball = function(game, velocity) {
+var Ball = function(game, velocity, mainEntity) {
   this.game = game;
   this.size = { x: 6, y: 6 };
   this.position = { x: 250, y: 475 };
   this.velocity = { x: velocity, y: velocity };
   this.radius = this.size.x / 2;
+  this.shouldBeVisible = mainEntity === "ball";
 };
 
 Ball.prototype = {

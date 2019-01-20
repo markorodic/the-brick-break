@@ -12,14 +12,35 @@
                 <label>SWITCH</label>
             </div>
             <div id="game-board" class="first-game">
-                            <canvas id='game-one' class='top-game' width="500" height="500"></canvas>
-                            <canvas id='game-two' width="500" height="500"></canvas>
-                            <canvas id='game-three' width="500" height="500"></canvas>
-                            <canvas id='game-four' width="500" height="500"></canvas>
+                <div id="game-one">
+                        <canvas id='game-one-bricks' class="" width="500" height="500"></canvas>
+                        <canvas id='game-one-ball' class="" width="500" height="500"></canvas>
+                        <canvas id='game-one-paddle' class="" width="500" height="500"></canvas>
+                </div>
+                <!-- <div>
+                        <canvas id='game-two-bricks' width="500" height="500"></canvas>
+                        <canvas id='game-two-ball' class='top-game' width="500" height="500"></canvas>
+                        <canvas id='game-two-paddle' width="500" height="500"></canvas>
+                </div>
+                <div>
+                        <canvas id='game-three-bricks' width="500" height="500"></canvas>
+                        <canvas id='game-three-ball' width="500" height="500"></canvas>
+                        <canvas id='game-three-paddle' class='top-game' width="500" height="500"></canvas>
+                </div>
+                <div>
+                        <canvas id='game-four-bricks' width="500" height="500"></canvas>
+                        <canvas id='game-four-ball' width="500" height="500"></canvas>
+                        <canvas id='game-four-paddle' width="500" height="500"></canvas>
+                </div> -->
             </div>
             <div class="information-container">
                 <div class="text-container text-one show-text">
-                    <h2>VANILLA JAVASCRIPT</h2>
+                    <div class="text-top-layer">
+                        <h2>VANILLA JAVASCRIPT</h2>
+                        <button onclick="separateGameBodies()">View 1</button>
+                        <button>View 2</button>
+                        <button>View 3</button>
+                    </div>
                     <div class="subtext-container">
                         <p>PERFORMANCE:</p>
                         <p>224ms</p>

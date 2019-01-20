@@ -1,3 +1,7 @@
+gameState = {
+  separated: false
+};
+
 function switchBoard() {
   let rotationClasses = {
     first: "first-game",
@@ -108,6 +112,23 @@ function switchBoard() {
 
   flashText();
   rotateBoard();
+}
+
+function separateGameBodies() {
+  const brickGame = document.getElementById("game-one-bricks");
+  const ballGame = document.getElementById("game-one-ball");
+  const paddleGame = document.getElementById("game-one-paddle");
+  if (gameState.separated) {
+    brickGame.classList.remove("separate");
+    ballGame.classList.remove("separate");
+    paddleGame.classList.remove("separate");
+    gameState.separated = false;
+  } else {
+    brickGame.classList.add("separate");
+    ballGame.classList.add("separate");
+    paddleGame.classList.add("separate");
+    gameState.separated = true;
+  }
 }
 
 // document.getElementsByClassName('.switch-button').addEventListener("click", () => {

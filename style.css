@@ -43,10 +43,10 @@ body {
 
 #game-board {
     height: 33rem;
-    width: 35rem;
-    display: flex;
+    width: 1500px;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
 .first-game {
@@ -114,8 +114,34 @@ canvas {
 }
 
 #game-one {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+#game-one-bricks, #game-one-ball, #game-one-paddle {
     position: absolute;
-    z-index: 4;
+    left: 500px;
+    transition: left 3s;
+}
+
+
+#game-one-bricks.separate {
+    left: 0;
+    transition: left 2s;
+}
+
+#game-one-ball.separate {
+    left: 500px;
+    transition: left 2s;
+}
+
+#game-one-paddle.separate {
+    left: 1000px;
+    transition: left 2s;
 }
 
 #game-two {
@@ -142,4 +168,9 @@ canvas {
 
 .show-text {
     display: inherit;
+}
+
+.text-top-layer {
+    display: flex;
+    justify-content: space-between;
 }

@@ -1,4 +1,4 @@
-var Paddle = function(gameSize) {
+var Paddle = function(gameSize, mainEntity) {
   (this.size = {
     x: 60,
     y: 7
@@ -10,6 +10,7 @@ var Paddle = function(gameSize) {
     (this.arrowKey = new KeyboardInput());
   this.velocity = 4;
   this.gameSize = gameSize;
+  this.shouldBeVisible = mainEntity === "paddle";
 };
 
 Paddle.prototype = {

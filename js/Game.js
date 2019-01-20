@@ -1,12 +1,17 @@
-var Game = function(canvasId, themeColour, ballVelocity) {
+var Game = function(canvasId, mainGameEntity, themeColour, ballVelocity) {
   var canvas = document.getElementById(canvasId);
   var ctx = canvas.getContext("2d");
   this.gameSize = { x: canvas.width, y: canvas.height };
   this.themeColour = themeColour;
+  this.mainGameEntity = mainGameEntity;
   this.bodies = {
-    bricks: drawToScreen.drawBricks(this, this.themeColour),
-    paddle: new Paddle(this.gameSize),
-    ball: new Ball(this, ballVelocity)
+    bricks: drawToScreen.drawBricks(
+      this,
+      this.themeColour,
+      this.mainGameEntity
+    ),
+    paddle: new Paddle(this.gameSize, mainGameEntity),
+    ball: new Ball(this, ballVelocity, mainGameEntity)
   };
   this.score = 0;
   this.lives = 3;
@@ -40,7 +45,6 @@ Game.prototype = {
   },
   draw: function(ctx, canvas) {
     ctx.clearRect(0, 0, this.gameSize.x, this.gameSize.y);
-    // ctx.globalCompositeOperation = "multiply";
     drawToScreen.drawRect(
       ctx,
       this.bodies.ball,
