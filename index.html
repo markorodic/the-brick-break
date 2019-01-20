@@ -1,13 +1,11 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="state.js" type="text/javascript"></script>
-        <script src="script.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="Game/Game.css">
     </head>
     <body>
         <div class="root-container">
             <div class="button-container">
-                <button onclick="switchBoard()" class="switch-button">
+                <button id="rotate-game-board-button" class="switch-button">
                     <img src="images/switch-icon.svg"/>
                 </button>
                 <label>SWITCH</label>
@@ -38,9 +36,8 @@
                 <div class="text-container text-one show-text">
                     <div class="text-top-layer">
                         <h2>VANILLA JAVASCRIPT</h2>
-                        <button onclick="separateGameBodies()">View 1</button>
-                        <button>View 2</button>
-                        <button>View 3</button>
+                        <button id="separate-view-button">Expand game bodies</button>
+                        <button onclick="separateGameBodies()">Collapse game bodies</button>
                     </div>
                     <div class="subtext-container">
                         <p>PERFORMANCE:</p>
@@ -71,6 +68,10 @@
             </div>
         </div>
     </body>
+    <script type="module" src="Game/State.js"></script>
+    <script type="module" src="Game/Game.js"></script>
+    <script type="module" src="Game/EventListeners.js"></script>
+    <script type="module" src="Game/Animations/Text.js"></script>
     <script type="text/javascript" src="js/Main.js"></script>
     <script type="text/javascript" src="js/Game.js"></script>
     <script type="text/javascript" src="js/Ball.js"></script>

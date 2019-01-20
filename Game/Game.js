@@ -1,36 +1,17 @@
-const State = state();
+import { state } from "./State.js";
+import { onDocumentLoaded } from "./EventListeners.js";
+import { flashText } from "./Animations/Text.js";
 
-function switchBoard() {
+const State = state();
+onDocumentLoaded();
+
+export function rotateBoard() {
   let rotationClasses = {
     first: "first-game",
     second: "second-game",
     third: "third-game",
     fourth: "fourth-game"
   };
-
-  function flashText() {
-    const buttonElement = document.getElementsByClassName(
-      "button-container"
-    )[0];
-    const subtextElement = document.getElementsByClassName(
-      "information-container"
-    )[0];
-    addFlashClass(buttonElement, subtextElement);
-
-    setTimeout(() => {
-      removeFlashClass(buttonElement, subtextElement);
-    }, 1500);
-  }
-
-  function addFlashClass(button, text) {
-    button.classList.add("flash");
-    text.classList.add("flash");
-  }
-
-  function removeFlashClass(button, text) {
-    button.classList.remove("flash");
-    text.classList.remove("flash");
-  }
 
   function changeClassToGame(boardElement, boardClassName) {
     switch (boardClassName) {
@@ -84,9 +65,17 @@ function switchBoard() {
     }, 1700);
   }
 
+  function addClass(element, newClass) {
+    element.classList.add(newClass);
+  }
+
+  function removeClass(element, newClass) {
+    element.classList.remove(newClass);
+  }
+
   function changeBoardClass(boardElement, removeClassName, addClassName) {
-    boardElement.classList.remove(removeClassName);
-    boardElement.classList.add(addClassName);
+    addClass(boardElement, addClassName);
+    removeClass(boardElement, removeClassName);
   }
 
   function changeTextClass(removeClassName, addClassName) {
@@ -112,7 +101,7 @@ function switchBoard() {
   rotateBoard();
 }
 
-function separateGameBodies() {
+export function changeGameBodyView() {
   const brickGame = document.getElementById("game-one-bricks");
   const ballGame = document.getElementById("game-one-ball");
   const paddleGame = document.getElementById("game-one-paddle");
@@ -129,17 +118,3 @@ function separateGameBodies() {
     State.setState("separated", true);
   }
 }
-
-// document.getElementsByClassName('.switch-button').addEventListener("click", () => {
-//     document.getElementsByClassName('.button-container').classList.add("flash");
-//     document.getElementsByClassName('.subtext-container').classList.add("flash");
-
-//     setTimeout(() => {
-//         document.getElementsByClassName('.game-board').classList.add("second");
-//     }, 200)
-
-//     setTimeout(() => {
-//         document.getElementsByClassName('.button-container').classList.add("flash");
-//         document.getElementsByClassName('.subtext-container').classList.add("flash");
-//     }, 200)
-// });

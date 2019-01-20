@@ -2,7 +2,7 @@ const initialState = {
   separated: false
 };
 
-function state() {
+export function state() {
   let state = Object.freeze(initialState);
 
   function getState() {
