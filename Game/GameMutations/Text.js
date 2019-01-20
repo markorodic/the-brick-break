@@ -1,7 +1,7 @@
-import { addClass, removeClass } from "../Utilities.js";
+import { addClass, removeClass, DOMNode } from "../Utilities/Utilities.js";
 
 export function flashText() {
-  const buttonElement = document.getElementById("button-container");
+  const buttonElement = DOMNode("button-container");
   const subtextElement = document.getElementsByClassName(
     "information-container"
   )[0];

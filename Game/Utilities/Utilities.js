@@ -10,3 +10,7 @@ export function replaceClass(boardElement, currentClassName, newClassName) {
   removeClass(boardElement, currentClassName);
   addClass(boardElement, newClassName);
 }
+
+export function DOMNode(id) {
+  return document.getElementById(id);
+}

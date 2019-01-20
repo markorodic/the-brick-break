@@ -2,6 +2,7 @@ import {
   gameRotateBoard,
   gameIsolateGameBodies
 } from "./GameMutations/GameMutations.js";
+import { DOMNode } from "./Utilities/Utilities.js";
 
 export function onDocumentLoaded() {
   if (
@@ -16,11 +17,9 @@ export function onDocumentLoaded() {
 }
 
 function registerEventListeners() {
-  const separateViewButton = document.getElementById("separate-view-button");
+  const separateViewButton = DOMNode("separate-view-button");
   addEventListenerOnClick(separateViewButton, gameIsolateGameBodies);
-  const rotateGameBoardButton = document.getElementById(
-    "rotate-game-board-button"
-  );
+  const rotateGameBoardButton = DOMNode("rotate-game-board-button");
   addEventListenerOnClick(rotateGameBoardButton, gameRotateBoard);
 }
 

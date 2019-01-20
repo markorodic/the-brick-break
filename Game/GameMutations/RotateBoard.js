@@ -1,5 +1,10 @@
 import { flashText } from "./Text.js";
-import { addClass, removeClass, replaceClass } from "../Utilities.js";
+import {
+  addClass,
+  removeClass,
+  replaceClass,
+  DOMNode
+} from "../Utilities/Utilities.js";
 
 export function rotateBoard() {
   let rotationClasses = {
@@ -53,8 +58,8 @@ export function rotateBoard() {
   }
 
   function changeTopGame(currentTopGameId, newTopGameId) {
-    const currentTopGameElement = document.getElementById(currentTopGameId);
-    const newTopGameElement = document.getElementById(newTopGameId);
+    const currentTopGameElement = DOMNode(currentTopGameId);
+    const newTopGameElement = DOMNode(newTopGameId);
     setTimeout(() => {
       currentTopGameElement.classList.remove("top-game");
       newTopGameElement.classList.add("top-game");
@@ -74,7 +79,7 @@ export function rotateBoard() {
   }
 
   function rotateBoard() {
-    const boardElement = document.getElementById("game-board");
+    const boardElement = DOMNode("game-board");
     const boardElementClass = boardElement.className;
 
     changeClassToGame(boardElement, boardElementClass);
