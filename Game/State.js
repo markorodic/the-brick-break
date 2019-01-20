@@ -28,3 +28,5 @@ export function state() {
     setState
   };
 }
+
+export const State = state();

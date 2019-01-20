@@ -10,7 +10,7 @@ body {
     height: 100vh;
 }
 
-.button-container {
+#button-container {
     display: flex;
     flex-direction: column;
     opacity: 1;
@@ -34,7 +34,7 @@ body {
     width: 4rem;
 }
 
-.button-container label {
+#button-container label {
     font-size: 0.8rem;
     margin-bottom: 2rem;
     letter-spacing: 0.3rem;
@@ -96,7 +96,7 @@ body {
     letter-spacing: 0.15rem;
 }
 
-.flash {
+#button-container.flash {
     opacity: 0;
     transition: opacity 0.2s;
 }

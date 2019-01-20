@@ -1,4 +1,7 @@
-import { rotateBoard, changeGameBodyView } from "./Game.js";
+import {
+  gameRotateBoard,
+  gameIsolateGameBodies
+} from "./GameMutations/GameMutations.js";
 
 export function onDocumentLoaded() {
   if (
@@ -14,11 +17,11 @@ export function onDocumentLoaded() {
 
 function registerEventListeners() {
   const separateViewButton = document.getElementById("separate-view-button");
-  addEventListenerOnClick(separateViewButton, changeGameBodyView);
+  addEventListenerOnClick(separateViewButton, gameIsolateGameBodies);
   const rotateGameBoardButton = document.getElementById(
     "rotate-game-board-button"
   );
-  addEventListenerOnClick(rotateGameBoardButton, rotateBoard);
+  addEventListenerOnClick(rotateGameBoardButton, gameRotateBoard);
 }
 
 function addEventListenerOnClick(element, callBack) {

@@ -1,5 +1,7 @@
+import { addClass, removeClass } from "../Utilities.js";
+
 export function flashText() {
-  const buttonElement = document.getElementsByClassName("button-container")[0];
+  const buttonElement = document.getElementById("button-container");
   const subtextElement = document.getElementsByClassName(
     "information-container"
   )[0];
@@ -11,11 +13,13 @@ export function flashText() {
 }
 
 function addFlashClass(button, text) {
-  button.classList.add("flash");
-  text.classList.add("flash");
+  addClass(button, "flash");
+  addClass(text, "flash");
 }
 
 function removeFlashClass(button, text) {
-  button.classList.remove("flash");
-  text.classList.remove("flash");
+  removeClass(button, "flash");
+  removeClass(text, "flash");
 }
+
+export function hideText() {}
