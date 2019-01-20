@@ -1,5 +1,6 @@
 const initialState = {
-  separated: false
+  separated: false,
+  currentGame: 1
 };
 
 export function state() {

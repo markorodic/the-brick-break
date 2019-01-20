@@ -2,9 +2,7 @@ import { addClass, removeClass, DOMNode } from "../Utilities/Utilities.js";
 
 export function flashText() {
   const buttonElement = DOMNode("button-container");
-  const subtextElement = document.getElementsByClassName(
-    "information-container"
-  )[0];
+  const subtextElement = DOMNode("information-container");
   addFlashClass(buttonElement, subtextElement);
 
   setTimeout(() => {

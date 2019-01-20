@@ -69,7 +69,7 @@ body {
     transition: transform 2s;
 }
 
-.information-container {
+#information-container {
     position: relative;
     width: 35rem;
     opacity: 1;
@@ -82,12 +82,13 @@ body {
     display: none;
 }
 
+.text-top-layer {
+    border-bottom: 1px solid #c7c7c7;
+}
+
 .text-container h2 {
     font-size: 0.8rem;
     letter-spacing: 0.15rem;
-    padding-bottom: 1rem;
-    margin: 1rem 0 0 0;
-    border-bottom: 1px solid #c7c7c7;
 }
 
 .subtext-container p {
@@ -96,7 +97,7 @@ body {
     letter-spacing: 0.15rem;
 }
 
-#button-container.flash {
+#button-container.flash, #information-container.flash {
     opacity: 0;
     transition: opacity 0.2s;
 }
@@ -173,4 +174,17 @@ canvas {
 .text-top-layer {
     display: flex;
     justify-content: space-between;
+}
+
+#separate-view-button {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    font-size: 0.7rem;
+    color: black;
+    font-weight: 100;
+    letter-spacing: 0.1rem;
 }
