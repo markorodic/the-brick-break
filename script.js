@@ -1,6 +1,4 @@
-gameState = {
-  separated: false
-};
+const State = state();
 
 function switchBoard() {
   let rotationClasses = {
@@ -118,16 +116,17 @@ function separateGameBodies() {
   const brickGame = document.getElementById("game-one-bricks");
   const ballGame = document.getElementById("game-one-ball");
   const paddleGame = document.getElementById("game-one-paddle");
+  const gameState = State.getState();
   if (gameState.separated) {
     brickGame.classList.remove("separate");
     ballGame.classList.remove("separate");
     paddleGame.classList.remove("separate");
-    gameState.separated = false;
+    State.setState("separated", false);
   } else {
     brickGame.classList.add("separate");
     ballGame.classList.add("separate");
     paddleGame.classList.add("separate");
-    gameState.separated = true;
+    State.setState("separated", true);
   }
 }
 
