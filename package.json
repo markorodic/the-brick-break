@@ -1,0 +1,17 @@
+{
+  "name": "breakout-mashup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:markorodic/breakout-mashup.git",
+  "author": "Paul Dariye <paul.dariye@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js",
+    "profile": "node profile.js"
+  },
+  "dependencies": {
+    "http": "^0.0.0",
+    "puppeteer": "^1.11.0",
+    "serve-handler": "^5.0.7"
+  }
+}
