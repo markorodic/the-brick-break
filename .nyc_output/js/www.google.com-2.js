@@ -1,0 +1,1 @@
+google.wf={};google.wf.s=Math.round(window.performance.now());(function(){var l='400,700';var font='Roboto';function a(){var b=c,e=document.fonts.load(b+" 10pt "+font);google.wf&&e.then(function(){google.wf["e"+b]=Math.round(window.performance.now())})};if(document.fonts&&document.fonts.load)for(var d=l.split(","),f=0,c=void 0;c=d[f];++f)a();})();

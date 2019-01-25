@@ -1,0 +1,1 @@
+window.gbar&&gbar.up&&gbar.up.tp&&gbar.up.tp();

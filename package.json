@@ -7,11 +7,23 @@
   "license": "MIT",
   "scripts": {
     "start": "node server.js",
-    "profile": "node profile.js"
+    "test:integration": "jest",
+    "test:unit": "jest"
+  },
+  "jest": {
+    "preset": "jest-puppeteer"
   },
   "dependencies": {
+    "chalk": "^2.4.2",
+    "cli-table": "^0.3.1",
     "http": "^0.0.0",
-    "puppeteer": "^1.11.0",
     "serve-handler": "^5.0.7"
+  },
+  "devDependencies": {
+    "jest": "^24.0.0",
+    "jest-puppeteer": "^3.9.0",
+    "nyc": "^13.1.0",
+    "puppeteer": "^1.11.0",
+    "puppeteer-to-istanbul": "^1.2.2"
   }
 }

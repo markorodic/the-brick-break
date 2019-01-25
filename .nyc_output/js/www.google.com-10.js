@@ -1,0 +1,1 @@
+typeof google==='object'&&google.aft&&google.aft(this)
