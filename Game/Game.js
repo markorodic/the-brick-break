@@ -1,3 +1,3 @@
-import { onDocumentLoaded } from "./EventListeners.js";
+import { registerEventListeners } from "./EventListeners.js";
 
-onDocumentLoaded();
+registerEventListeners();

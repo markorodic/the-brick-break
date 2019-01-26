@@ -28,6 +28,9 @@ var drawToScreen = {
       bricks.push(new Brick(game, { x: x, y: y }, colour, mainEntity));
     }
     return bricks;
+  },
+  drawFps: function(fpsData) {
+    document.getElementById("fpsGame").textContent = fpsData;
   }
 };
 

@@ -15,14 +15,20 @@ var Game = function(canvasId, mainGameEntity, themeColour, ballVelocity) {
   };
   this.score = 0;
   this.lives = 3;
+
+  this.gameFps = new Fps("game");
+  this.updateFps = new Fps("update");
+  this.drawFps = new Fps("draw");
+  this.drawFpsCount = 0;
+
   var self = this;
 
   function playGame() {
+    self.gameFps.calcData();
     self.update();
     self.draw(ctx, canvas);
     requestAnimationFrame(playGame);
   }
-
   playGame();
 };
 
@@ -41,9 +47,9 @@ Game.prototype = {
       this.score = 0;
     }
     paddle.update(ball);
-    ball.update(paddle, bricks, gameSize, this.score, this.lives);
+    ball.update(paddle, bricks, gameSize);
   },
-  draw: function(ctx, canvas) {
+  draw: function(ctx) {
     ctx.clearRect(0, 0, this.gameSize.x, this.gameSize.y);
     drawToScreen.drawRect(
       ctx,
@@ -62,5 +68,9 @@ Game.prototype = {
         this.bodies.bricks[i].colour
       );
     }
+    if (this.drawFpsCount % 100 === 0) {
+      drawToScreen.drawFps(this.gameFps.getData());
+    }
+    this.drawFpsCount++;
   }
 };

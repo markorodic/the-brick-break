@@ -89,6 +89,7 @@ body {
 .text-container h2 {
     font-size: 0.8rem;
     letter-spacing: 0.15rem;
+    display: inline-block;
 }
 
 .subtext-container p {
@@ -187,4 +188,12 @@ canvas {
     color: black;
     font-weight: 100;
     letter-spacing: 0.1rem;
+}
+
+iframe {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 38rem;
+    opacity: 0.3;
 }

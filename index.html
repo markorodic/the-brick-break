@@ -11,26 +11,12 @@
                 <label>SWITCH</label>
             </div>
             <div id="game-board" class="first-game">
-                <div id="game-one">
+                <!-- <div id="game-one">
                         <canvas id='game-one-bricks' class="" width="500" height="500"></canvas>
                         <canvas id='game-one-ball' class="" width="500" height="500"></canvas>
                         <canvas id='game-one-paddle' class="" width="500" height="500"></canvas>
-                </div>
-                <!-- <div>
-                        <canvas id='game-two-bricks' width="500" height="500"></canvas>
-                        <canvas id='game-two-ball' class='top-game' width="500" height="500"></canvas>
-                        <canvas id='game-two-paddle' width="500" height="500"></canvas>
-                </div>
-                <div>
-                        <canvas id='game-three-bricks' width="500" height="500"></canvas>
-                        <canvas id='game-three-ball' width="500" height="500"></canvas>
-                        <canvas id='game-three-paddle' class='top-game' width="500" height="500"></canvas>
-                </div>
-                <div>
-                        <canvas id='game-four-bricks' width="500" height="500"></canvas>
-                        <canvas id='game-four-ball' width="500" height="500"></canvas>
-                        <canvas id='game-four-paddle' width="500" height="500"></canvas>
                 </div> -->
+                <iframe src="functional-js-game/index.html"></iframe>
             </div>
             <div id="information-container">
                 <div class="text-container text-one show-text">
@@ -39,8 +25,9 @@
                         <button id="separate-view-button">EXPAND VIEW</button>
                     </div>
                     <div class="subtext-container">
-                        <p>PERFORMANCE:</p>
-                        <p>224ms</p>
+                        <h2>GAME LOOP PERFORMANCE:</h2>
+                        <p id="fpsGame"></p>
+                        <p id="fpsFunctional"></p>
                     </div>
                 </div>
                 <div class="text-container text-two">
@@ -75,15 +62,6 @@
     <script type="module" src="Game/GameMutations/IsolateGameBodies.js"></script>
     <script type="module" src="Game/GameMutations/RotateBoard.js"></script>
     <script type="module" src="Game/GameMutations/Text.js"></script>
-    <script type="text/javascript" src="js/Main.js"></script>
-    <script type="text/javascript" src="js/Game.js"></script>
-    <script type="text/javascript" src="js/Ball.js"></script>
-    <script type="text/javascript" src="js/Bricks.js"></script>
-    <script type="text/javascript" src="js/Collisions.js"></script>
-    <script type="text/javascript" src="js/Constants.js"></script>
-    <script type="text/javascript" src="js/Draw.js"></script>
-    <script type="text/javascript" src="js/KeyboardInput.js"></script>
-    <script type="text/javascript" src="js/Paddle.js"></script>
-    <script type="text/javascript" src="js/Colours.js"></script>
+    <script type="text/javascript" src="Game/fps2.js"></script>
 </html>
     

@@ -1,8 +1,8 @@
 (function() {
   window.onload = function() {
-    new Game("game-one-bricks", "bricks", "blue", 1);
-    new Game("game-one-ball", "ball", "red", 1);
-    new Game("game-one-paddle", "paddle", "green", 1);
+    // new Game("game-one-bricks", "bricks", "blue", 0.5);
+    // new Game("game-one-ball", "ball", "blue", 0.5);
+    // new Game("game-one-paddle", "paddle", "blue", 0.5);
     // new Game("game-two-bricks", "yellow", 4);
     // new Game("game-two-ball", "blue", 1);
     // new Game("game-two-paddle", "red", 1.4);

@@ -4,19 +4,19 @@ import {
 } from "./GameMutations/GameMutations.js";
 import { DOMNode } from "./Utilities/Utilities.js";
 
-export function onDocumentLoaded() {
-  if (
-    document.attachEvent
-      ? document.readyState === "complete"
-      : document.readyState !== "loading"
-  ) {
-    registerEventListeners();
-  } else {
-    document.addEventListener("DOMContentLoaded", registerViewEventListeners);
-  }
-}
+// export function onDocumentLoaded() {
+//   if (
+//     document.attachEvent
+//       ? document.readyState === "complete"
+//       : document.readyState !== "loading"
+//   ) {
+//     registerEventListeners();
+//   } else {
+//     document.addEventListener("DOMContentLoaded", registerViewEventListeners);
+//   }
+// }
 
-function registerEventListeners() {
+export function registerEventListeners() {
   const separateViewButton = DOMNode("separate-view-button");
   addEventListenerOnClick(separateViewButton, gameIsolateGameBodies);
   const rotateGameBoardButton = DOMNode("rotate-game-board-button");
