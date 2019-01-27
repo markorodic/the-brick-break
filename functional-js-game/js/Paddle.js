@@ -9,7 +9,6 @@ export function updatePaddle(state, canvas) {
   const paddleCanMoveRight =
     state.ballPosition.x < canvas.width - CONSTANTS.PADDLE.SIZE.width / 2;
 
-  console.log(paddleCanMoveLeft);
   if (paddleCanMoveLeft && paddleCanMoveRight) {
     newState.paddlePositionX =
       state.ballPosition.x - CONSTANTS.PADDLE.SIZE.width / 2;

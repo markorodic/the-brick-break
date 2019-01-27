@@ -4,11 +4,11 @@ body {
 }
 canvas {
 	min-width: 392px;
-	background: #141414;
+	background: none;
 }
 
 div {
-	background: black;
+	background: none;
     height: 100vh;
     display: flex;
     justify-content: center;

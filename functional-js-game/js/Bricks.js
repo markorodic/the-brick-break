@@ -1,19 +1,23 @@
+import { ballHitsABrick } from "./Collisions.js";
+
 export function initBricks() {
-  const emptyBrickList = Array(84).fill({ x: 0, y: 0, colour: "" });
+  const emptyBrickList = Array(196).fill({ x: 0, y: 0, colour: "" });
   return assignBrickPositions(emptyBrickList);
 }
 
 function assignBrickPositions(emptyBrickList) {
   const assignedBrickList = emptyBrickList.map(function(brick, index) {
-    var x = (index % 13) * 31;
-    var y = 105 + (index % 6) * 10;
-    var colour = whichColour(y);
+    var xMultiple = index % 14;
+    var yMultiple = Math.floor(index / 14);
+    var x = 29 * xMultiple + 61;
+    var y = 29 * yMultiple + 61;
+    var colour = whichColour(yMultiple);
     return { x: x, y: y, colour: colour };
   });
   return assignedBrickList;
 }
 
-function filterBricks(state) {
+export function filterBricks(state) {
   const { ballPosition, bricks } = state;
   state.bricks = state.bricks.filter(function(brick) {
     return !ballHitsABrick(ballPosition, brick);

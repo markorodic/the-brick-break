@@ -10,6 +10,6 @@ export const CONSTANTS = {
     MOVERIGHT: 4
   },
   BRICK: {
-    SIZE: { x: 32, y: 10 }
+    SIZE: { x: 29, y: 29 }
   }
 };

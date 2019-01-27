@@ -1,4 +1,5 @@
 import { CONSTANTS } from "./Constants.js";
+import { filterBricks } from "./Bricks.js";
 
 export function collisionDetection(state, canvas) {
   const { ballPosition, ballVelocity, paddlePositionX, bricks } = state;
@@ -61,7 +62,7 @@ export function ballHitsBrick(ballPosition, bricks) {
   return hitBrick[0];
 }
 
-function ballHitsABrick(ballPosition, brick) {
+export function ballHitsABrick(ballPosition, brick) {
   const ballCenterX = ballPosition.x + CONSTANTS.BALL.DIAMETER / 2;
   const ballCenterY = ballPosition.y + CONSTANTS.BALL.DIAMETER / 2;
   const ballIsBeneathBrickTop = ballCenterY > brick.y;
