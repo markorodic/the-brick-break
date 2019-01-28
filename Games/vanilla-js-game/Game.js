@@ -3,7 +3,8 @@ import { Paddle } from "./Paddle.js";
 import { Ball } from "./Ball.js";
 import { collisions } from "./Collisions.js";
 import { colours } from "./Colours.js";
-import { Fps2 } from "../../Game/fps2.js";
+import { IterationCounter } from "../../GameBoard/Counters/IterationCounter.js";
+import { FramesPerSecondCounter } from "../../GameBoard/Counters/FramesPerSecond.js";
 
 export function Game(canvasId, mainGameEntity, themeColour, ballVelocity) {
   var canvas = document.getElementById(canvasId);
@@ -22,18 +23,18 @@ export function Game(canvasId, mainGameEntity, themeColour, ballVelocity) {
   };
   this.score = 0;
   this.lives = 3;
-
-  this.gameFps = new Fps2();
-  // this.updateFps = new Fps("update");
-  // this.drawFps = new Fps("draw");
-  // this.drawFpsCount = 0;
+  this.framesPerSecondCounter = new FramesPerSecondCounter();
+  this.iterationCounter = new IterationCounter();
+  this.fpsCount = 0;
 
   var self = this;
 
   function playGame() {
-    self.gameFps.calcData();
+    self.iterationCounter.startCalc("vanilla");
+    self.framesPerSecondCounter.calcData("vanilla");
     self.update();
     self.draw(ctx, canvas);
+    self.iterationCounter.endCalc("vanilla");
     requestAnimationFrame(playGame);
   }
   playGame();
@@ -75,9 +76,12 @@ Game.prototype = {
         this.bodies.bricks[i].colour
       );
     }
-    // if (this.drawFpsCount % 100 === 0) {
-    drawToScreen.drawFps(this.gameFps.getData());
-    // }
-    this.drawFpsCount++;
+    if (this.fpsCount % 100 === 1) {
+      drawToScreen.framesPerSecondCounter(
+        this.framesPerSecondCounter.getData()
+      );
+      drawToScreen.iterationCounter(this.iterationCounter.getData());
+    }
+    this.fpsCount++;
   }
 };

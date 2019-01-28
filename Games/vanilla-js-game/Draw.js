@@ -32,9 +32,11 @@ export const drawToScreen = {
     }
     return bricks;
   },
-  drawFps: function(fpsData) {
-    console.log("draw");
+  iterationCounter: function(fpsData) {
     document.getElementById("fpsVanilla").textContent = fpsData;
+  },
+  framesPerSecondCounter: function(fpsData) {
+    document.getElementById("fpsVanillaNew").textContent = fpsData;
   }
 };
 

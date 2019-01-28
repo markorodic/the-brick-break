@@ -115,7 +115,7 @@ canvas {
 	align-items: center;
 }
 
-#game-one, #game-two {
+#game-one, #game-two, #game-three, #game-four {
     position: relative;
     height: 100%;
     width: 100%;
@@ -131,6 +131,18 @@ canvas {
 }
 
 #game-two-bricks, #game-two-ball, #game-two-paddle {
+    position: absolute;
+    left: 500px;
+    transition: left 3s;
+}
+
+#game-three-bricks, #game-three-ball, #game-three-paddle {
+    position: absolute;
+    left: 500px;
+    transition: left 3s;
+}
+
+#game-four-bricks, #game-four-ball, #game-four-paddle {
     position: absolute;
     left: 500px;
     transition: left 3s;
@@ -202,4 +214,13 @@ iframe {
     top: 0;
     height: 515px;
     border: none;
+}
+
+#fpsVanilla,#fpsVanillaNew, #fpsVanillaUpdate, #fpsFunctional, #fpsFunctionalNew, #fpsFunctionalUpdate, #fpsFunctionalUpdateBall {
+    font-weight: 900;
+}
+
+.vanillaData {
+    display: flex;
+    flex-direction: column;
 }

@@ -1,6 +1,8 @@
 import { ballFalls, ballHitsBrick } from "./Collisions.js";
+import { iterationCounterUpdate } from "./Game.js";
 
 export function updateGame(state, canvas) {
+  iterationCounterUpdate.startCalc("functional update");
   const {
     lives,
     score,
@@ -22,6 +24,6 @@ export function updateGame(state, canvas) {
   if (ballHitsBrick(ballPosition, bricks)) {
     newState.score += 1;
   }
-
+  iterationCounterUpdate.endCalc("functional update");
   return newState;
 }
