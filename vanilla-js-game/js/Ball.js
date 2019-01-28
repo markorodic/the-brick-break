@@ -1,4 +1,6 @@
-var Ball = function(game, velocity, mainEntity) {
+import { collisions } from "./Collisions.js";
+
+export const Ball = function(game, velocity, mainEntity) {
   this.game = game;
   this.size = { x: 6, y: 6 };
   this.position = { x: 250, y: 475 };
@@ -9,24 +11,23 @@ var Ball = function(game, velocity, mainEntity) {
 
 Ball.prototype = {
   update: function(paddle, bricks, gameSize) {
-    ball = this;
-    if (collision.betweenBallAndCeiling(this.position.y, this.radius)) {
+    if (collisions.betweenBallAndCeiling(this.position.y, this.radius)) {
       this.velocity.y = -this.velocity.y;
     }
-    if (collision.betweenBallAndWall(ball, gameSize)) {
+    if (collisions.betweenBallAndWall(this, gameSize)) {
       this.velocity.x = -this.velocity.x;
     }
-    if (collision.ballHasDropped(ball, gameSize)) {
+    if (collisions.ballHasDropped(this, gameSize)) {
       this.game.lives -= 1;
       this.position = { x: 200, y: 400 };
       this.velocity = { x: 0, y: 0 };
     }
-    if (collision.betweenBallAndPaddle(ball, paddle, gameSize)) {
+    if (collisions.betweenBallAndPaddle(this, paddle, gameSize)) {
       this.velocity.y = -this.velocity.y;
     }
     this.position.x += this.velocity.x;
     this.position.y += this.velocity.y;
-    if (collision.betweenBallAndBrick(ball, bricks)) {
+    if (collisions.betweenBallAndBrick(this, bricks)) {
       this.velocity.y = -this.velocity.y;
       this.game.score += 1;
     }

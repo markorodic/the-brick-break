@@ -1,4 +1,7 @@
-var drawToScreen = {
+import { colours } from "./Colours.js";
+import { Brick } from "./Bricks.js";
+
+export const drawToScreen = {
   drawRect: function(ctx, body, colour) {
     if (body.shouldBeVisible) {
       ctx.fillStyle = colour;
@@ -30,7 +33,8 @@ var drawToScreen = {
     return bricks;
   },
   drawFps: function(fpsData) {
-    document.getElementById("fpsGame").textContent = fpsData;
+    console.log("draw");
+    document.getElementById("fpsVanilla").textContent = fpsData;
   }
 };
 

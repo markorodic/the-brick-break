@@ -5,11 +5,9 @@ export const CONSTANTS = {
     LAUNCH: { x: 2, y: 2 }
   },
   PADDLE: {
-    SIZE: { width: 60, height: 6 },
-    MOVELEFT: -4,
-    MOVERIGHT: 4
+    SIZE: { width: 60, height: 6 }
   },
   BRICK: {
-    SIZE: { x: 29, y: 29 }
+    SIZE: { x: 29.5, y: 29.5 }
   }
 };

@@ -11,12 +11,18 @@
                 <label>SWITCH</label>
             </div>
             <div id="game-board" class="first-game">
-                <!-- <div id="game-one">
+                <div id="game-one">
                         <canvas id='game-one-bricks' class="" width="500" height="500"></canvas>
                         <canvas id='game-one-ball' class="" width="500" height="500"></canvas>
                         <canvas id='game-one-paddle' class="" width="500" height="500"></canvas>
-                </div> -->
-                <iframe src="functional-js-game/index.html"></iframe>
+                </div>
+                <div id="game-two">
+                    <canvas id='game-two-bricks' class="" width="500" height="500"></canvas>
+                    <canvas id='game-two-ball' class="" width="500" height="500"></canvas>
+                    <canvas id='game-two-paddle' class="" width="500" height="500"></canvas>
+                </div>
+                <!-- <iframe src="functional-js-game/index.html"></iframe> -->
+                <!-- <iframe src="vanilla-js-game/index.html"></iframe> -->
             </div>
             <div id="information-container">
                 <div class="text-container text-one show-text">
@@ -26,7 +32,7 @@
                     </div>
                     <div class="subtext-container">
                         <h2>GAME LOOP PERFORMANCE:</h2>
-                        <p id="fpsGame"></p>
+                        <p id="fpsVanilla"></p>
                         <p id="fpsFunctional"></p>
                     </div>
                 </div>
@@ -62,6 +68,25 @@
     <script type="module" src="Game/GameMutations/IsolateGameBodies.js"></script>
     <script type="module" src="Game/GameMutations/RotateBoard.js"></script>
     <script type="module" src="Game/GameMutations/Text.js"></script>
-    <script type="text/javascript" src="Game/fps2.js"></script>
+    <script type="module" src="Game/fps2.js"></script>
+    <script type="module" src="Game/fps.js"></script>
+    <script type="module" src="vanilla-js-game/js/Main.js"></script>
+    <script type="module" src="vanilla-js-game/js/Draw.js"></script>
+    <script type="module" src="vanilla-js-game/js/Ball.js"></script>
+    <script type="module" src="vanilla-js-game/js/Bricks.js"></script>
+    <script type="module" src="vanilla-js-game/js/Collisions.js"></script>
+    <script type="module" src="vanilla-js-game/js/Colours.js"></script>
+    <script type="module" src="vanilla-js-game/js/Game.js"></script>
+    <script type="module" src="functional-js-game/js/asdf.js"></script>
+    <!-- <script type="module" src="functional-js-game/js/Draw.js"></script>
+    <script type="module" src="functional-js-game/js/Ball.js"></script>
+    <script type="module" src="functional-js-game/js/Bricks.js"></script>
+    <script type="module" src="functional-js-game/js/Collisions.js"></script>
+    <script type="module" src="functional-js-game/js/Paddle.js"></script>
+    <script type="module" src="functional-js-game/js/Update.js"></script>
+    <script type="module" src="functional-js-game/js/Update3.js"></script>
+    <script type="module" src="functional-js-game/js/State.js"></script>
+    <script type="module" src="functional-js-game/js/Game.js"></script>
+    <script type="module" src="functional-js-game/js/Constants.js"></script> -->
 </html>
     

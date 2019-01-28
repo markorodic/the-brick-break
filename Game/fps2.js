@@ -1,8 +1,7 @@
-class Fps {
+export class Fps2 {
   constructor(body) {
     this.frames = [];
     this.lastFrameTimeStamp = performance.now();
-    this.body = body;
   }
   calcData() {
     // if (this.count % 100 === 0) {

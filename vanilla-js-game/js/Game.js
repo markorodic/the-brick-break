@@ -1,4 +1,11 @@
-var Game = function(canvasId, mainGameEntity, themeColour, ballVelocity) {
+import { drawToScreen } from "./Draw.js";
+import { Paddle } from "./Paddle.js";
+import { Ball } from "./Ball.js";
+import { collisions } from "./Collisions.js";
+import { colours } from "./Colours.js";
+import { Fps2 } from "../../Game/fps2.js";
+
+export function Game(canvasId, mainGameEntity, themeColour, ballVelocity) {
   var canvas = document.getElementById(canvasId);
   var ctx = canvas.getContext("2d");
   this.gameSize = { x: canvas.width, y: canvas.height };
@@ -16,10 +23,10 @@ var Game = function(canvasId, mainGameEntity, themeColour, ballVelocity) {
   this.score = 0;
   this.lives = 3;
 
-  this.gameFps = new Fps("game");
-  this.updateFps = new Fps("update");
-  this.drawFps = new Fps("draw");
-  this.drawFpsCount = 0;
+  this.gameFps = new Fps2();
+  // this.updateFps = new Fps("update");
+  // this.drawFps = new Fps("draw");
+  // this.drawFpsCount = 0;
 
   var self = this;
 
@@ -30,7 +37,7 @@ var Game = function(canvasId, mainGameEntity, themeColour, ballVelocity) {
     requestAnimationFrame(playGame);
   }
   playGame();
-};
+}
 
 Game.prototype = {
   update: function() {
@@ -40,7 +47,7 @@ Game.prototype = {
     var gameSize = this.gameSize;
 
     this.bodies.bricks = bricks.filter(function(brick) {
-      return !collision.brickCol(brick, ball);
+      return !collisions.brickCol(brick, ball);
     });
     if (this.lives < 0) {
       this.lives = 3;
@@ -68,9 +75,9 @@ Game.prototype = {
         this.bodies.bricks[i].colour
       );
     }
-    if (this.drawFpsCount % 100 === 0) {
-      drawToScreen.drawFps(this.gameFps.getData());
-    }
+    // if (this.drawFpsCount % 100 === 0) {
+    drawToScreen.drawFps(this.gameFps.getData());
+    // }
     this.drawFpsCount++;
   }
 };

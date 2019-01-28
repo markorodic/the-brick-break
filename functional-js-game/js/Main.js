@@ -1,4 +1,3 @@
-import { game } from "./Game.js";
-window.onload = function() {
-  game("screen");
-};
+// game("game-two-bricks", "bricks");
+// game("game-two-ball", "ball");
+// game("game-two-paddle", "paddle");

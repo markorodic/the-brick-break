@@ -1,4 +1,4 @@
-var collision = {
+export const collisions = {
   betweenBallAndPaddle: function(ball, paddle, gameSize) {
     return (
       ball.position.y >= gameSize.y - ball.radius &&

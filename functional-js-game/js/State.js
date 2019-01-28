@@ -5,7 +5,7 @@ export const initialState = {
   lives: 3,
   ballPosition: { x: 250, y: 479 },
   ballVelocity: { x: -1, y: 1 },
-  paddlePositionX: 166,
+  paddlePositionX: 250,
   bricks: initBricks(),
   gameMode: "start",
   frames: [],

@@ -1,5 +1,4 @@
 import { CONSTANTS } from "./Constants.js";
-import { getData } from "./fps.js";
 
 export function draw(state, canvas, ctx) {
   [drawBall, drawPaddle, drawBricks, drawStats].forEach(function(drawFunction) {
@@ -38,12 +37,12 @@ function drawPaddle({ state, ctx }) {
   ctx.fillStyle = "#C6494B";
   ctx.fillRect(
     paddlePositionX,
-    564,
+    500 - CONSTANTS.PADDLE.SIZE.height,
     CONSTANTS.PADDLE.SIZE.width,
     CONSTANTS.PADDLE.SIZE.height
   );
 }
 
 function drawStats({ state, ctx }) {
-  console.log(getData(state));
+  // console.log(getData(state));
 }

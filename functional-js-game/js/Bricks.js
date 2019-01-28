@@ -9,8 +9,8 @@ function assignBrickPositions(emptyBrickList) {
   const assignedBrickList = emptyBrickList.map(function(brick, index) {
     var xMultiple = index % 14;
     var yMultiple = Math.floor(index / 14);
-    var x = 29 * xMultiple + 61;
-    var y = 29 * yMultiple + 61;
+    var x = 29 * xMultiple + 46.5;
+    var y = 29 * yMultiple + 46.5;
     var colour = whichColour(yMultiple);
     return { x: x, y: y, colour: colour };
   });

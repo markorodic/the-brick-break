@@ -42,11 +42,11 @@ body {
 }
 
 #game-board {
-    height: 33rem;
+    height: 500px;
     width: 1500px;
-    /* display: flex;
+    display: flex;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
 }
 
 .first-game {
@@ -115,7 +115,7 @@ canvas {
 	align-items: center;
 }
 
-#game-one {
+#game-one, #game-two {
     position: relative;
     height: 100%;
     width: 100%;
@@ -125,6 +125,12 @@ canvas {
 }
 
 #game-one-bricks, #game-one-ball, #game-one-paddle {
+    position: absolute;
+    left: 500px;
+    transition: left 3s;
+}
+
+#game-two-bricks, #game-two-ball, #game-two-paddle {
     position: absolute;
     left: 500px;
     transition: left 3s;
@@ -191,9 +197,9 @@ canvas {
 }
 
 iframe {
-    width: 100%;
+    width: 1500px;
     position: absolute;
     top: 0;
-    height: 38rem;
-    opacity: 0.3;
+    height: 515px;
+    border: none;
 }

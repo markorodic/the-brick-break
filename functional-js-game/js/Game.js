@@ -2,7 +2,6 @@ import { initialState } from "./State.js";
 import { draw } from "./Draw.js";
 import { update } from "./Update3.js";
 import { collisionDetection } from "./Collisions.js";
-import { calcData } from "./fps.js";
 
 export function game(canvasId) {
   const canvas = document.getElementById(canvasId);
@@ -22,7 +21,7 @@ function playGame(state, canvas, ctx) {
 }
 
 function gameLoop(state, canvas, ctx) {
-  calcData(state);
+  // calcData(state);
   const newState = [state, draw, update, collisionDetection].reduce(function(
     currentState,
     updateFunction

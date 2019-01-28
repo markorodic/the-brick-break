@@ -1,4 +1,4 @@
-var colours = {
+export const colours = {
   blue: {
     main: "#6686BB",
     rowOne: "rgba(0, 46, 142, 0.5)",
