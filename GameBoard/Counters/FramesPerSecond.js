@@ -3,7 +3,7 @@ export class FramesPerSecondCounter {
     this.frames = [];
     this.lastFrameTimeStamp = performance.now();
   }
-  calcData() {
+  calcData(body) {
     // if (this.count % 100 === 0) {
     const now = performance.now();
     const delta = now - this.lastFrameTimeStamp;
