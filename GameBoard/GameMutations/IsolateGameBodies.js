@@ -2,18 +2,21 @@ import { State } from "../State.js";
 import { DOMNode } from "../Utilities/Utilities.js";
 
 export function isolateGameBodies() {
-  // const brickGame = DOMNode("game-one-bricks");
-  // const ballGame = DOMNode("game-one-ball");
-  // const paddleGame = DOMNode("game-one-paddle");
-  const gameClassNames = getGameClassNames();
-  const gameState = State.getState();
-
-  if (gameState.separated) {
+  console.log("inside isolateGameBodies");
+  const isSeparated = State.getState().separated;
+  if (isSeparated) {
+    const currentGame = State.getState().currentGame;
+    const gameClassNames = getGameClassNames(currentGame);
     gameClassNames.bricks.classList.remove("separate");
     gameClassNames.ball.classList.remove("separate");
     gameClassNames.paddle.classList.remove("separate");
     State.setState("separated", false);
+    showAllGames();
   } else {
+    const currentGame = State.getState().currentGame;
+    const gameClassNames = getGameClassNames(currentGame);
+
+    hideAllGamesExcept(currentGame);
     gameClassNames.bricks.classList.add("separate");
     gameClassNames.ball.classList.add("separate");
     gameClassNames.paddle.classList.add("separate");
@@ -21,9 +24,61 @@ export function isolateGameBodies() {
   }
 }
 
-function getGameClassNames() {
-  const currentGame = State.getState().currentGame;
-  switch (currentGame) {
+function hideAllGamesExcept(game) {
+  switch (game) {
+    case 1:
+      hideGame(2);
+      hideGame(3);
+      hideGame(4);
+      break;
+    case 2:
+      hideGame(1);
+      hideGame(3);
+      hideGame(4);
+      break;
+    case 3:
+      hideGame(1);
+      hideGame(2);
+      hideGame(4);
+      break;
+    case 4:
+      hideGame(1);
+      hideGame(2);
+      hideGame(3);
+      break;
+  }
+}
+
+function hideGame(game) {
+  switch (game) {
+    case 1:
+      const gameOneContainer = DOMNode("game-one");
+      gameOneContainer.classList.add("hide");
+    case 2:
+      const gameTwoContainer = DOMNode("game-two");
+      gameTwoContainer.classList.add("hide");
+    case 3:
+      const gameThreeContainer = DOMNode("game-three");
+      gameThreeContainer.classList.add("hide");
+    case 4:
+      const gameFourContainer = DOMNode("game-four");
+      gameFourContainer.classList.add("hide");
+  }
+}
+
+function showAllGames() {
+  const gameOneContainer = DOMNode("game-one");
+  gameOneContainer.classList.remove("hide");
+  const gameTwoContainer = DOMNode("game-two");
+  gameTwoContainer.classList.remove("hide");
+  const gameThreeContainer = DOMNode("game-three");
+  gameThreeContainer.classList.remove("hide");
+  const gameFourContainer = DOMNode("game-four");
+  gameFourContainer.classList.remove("hide");
+}
+
+function getGameClassNames(game) {
+  switch (game) {
     case 1:
       return {
         bricks: DOMNode("game-one-bricks"),
@@ -32,21 +87,21 @@ function getGameClassNames() {
       };
     case 2:
       return {
-        bricks: "game-two-bricks",
-        ball: "game-two-ball",
-        paddle: "game-two-paddle"
+        bricks: DOMNode("game-two-bricks"),
+        ball: DOMNode("game-two-ball"),
+        paddle: DOMNode("game-two-paddle")
       };
     case 3:
       return {
-        bricks: "game-three-bricks",
-        ball: "game-three-ball",
-        paddle: "game-three-paddle"
+        bricks: DOMNode("game-three-bricks"),
+        ball: DOMNode("game-three-ball"),
+        paddle: DOMNode("game-three-paddle")
       };
     case 4:
       return {
-        bricks: "game-four-bricks",
-        ball: "game-four-ball",
-        paddle: "game-four-paddle"
+        bricks: DOMNode("game-four-bricks"),
+        ball: DOMNode("game-four-ball"),
+        paddle: DOMNode("game-four-paddle")
       };
   }
 }

@@ -135,10 +135,14 @@ canvas {
     position: relative;
     height: 100%;
     width: 100%;
+    opacity: 1;
+    transition: 0.5s;
+    transition-delay: 3s;
     /* display: flex;
     justify-content: center;
     align-items: center; */
 }
+
 
 #game-one-bricks, #game-one-ball, #game-one-paddle {
     position: absolute;
@@ -162,6 +166,11 @@ canvas {
     position: absolute;
     left: 500px;
     transition: left 3s;
+}
+
+#game-board .hide {
+    opacity: 0;
+    transition-delay: 0s;
 }
 
 

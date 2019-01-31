@@ -41,7 +41,12 @@
                     <canvas id='game-three-paddle' class="" width="500" height="500"></canvas>
                 </div>
                 <div id="game-four">
-                    	<div id="elm-app"></div>
+                    <canvas id='game-four-bricks' class="" width="500" height="500"></canvas>
+                    <canvas id='game-four-ball' class="" width="500" height="500"></canvas>
+                    <canvas id='game-four-paddle' class="" width="500" height="500"></canvas>
+                        <!-- <div id="game-four-bricks" class="elm-app"></div>
+                        <div id="game-four-ball" class="elm-app"></div>
+                    	<div id="game-four-paddle" class="elm-app"></div> -->
                 </div>
                 <!-- <iframe src="functional-js-game/index.html"></iframe> -->
                 <!-- <iframe src="vanilla-js-game/index.html"></iframe> -->
@@ -52,43 +57,18 @@
                         <h2>VANILLA JAVASCRIPT</h2>
                         <button id="separate-view-button">EXPAND VIEW</button>
                     </div>
-                    <!-- <div class="subtext-container">
-                        <h2>GAME LOOP PERFORMANCE:</h2>
-                        <div>
-                            <div>
-                                <div>
-                                    <p>Vanilla Game - FPS</p>
-                                    <p id="fpsVanillaNew"></p>
-                                </div>
-                                <div>
-                                    <p>Vanilla Game - Time(ms)</p>
-                                    <p id="fpsVanilla"></p>
-                                </div>
-                                <div>
-                                    <p>FP Game - FPS</p>
-                                    <p id="fpsFunctionalNew"></p>
-                                </div>
-                                <div>
-                                    <p>FP Game - Time(ms)</p>
-                                    <p id="fpsFunctional"></p>
-                                </div>
-                                <div>
-                                    <p>FP Game - Update Function Time(ms)</p>
-                                    <p id="fpsFunctionalUpdate"></p>
-                                </div>
-                                <div>
-                                    <p>FP Game - Update Ball Function Time(ms)</p>
-                                    <p id="fpsFunctionalUpdateBall"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
                 <div class="text-container text-two">
-                    <h2>FUNCTIONAL JAVASCRIPT</h2>
+                    <div class="text-top-layer">
+                        <h2>FUNCTIONAL JAVASCRIPT</h2>
+                        <button id="separate-view-button">EXPAND VIEW</button>
+                    </div>
                 </div>
                 <div class="text-container text-three">
-                    <h2>ES6 JAVASCRIPT</h2>
+                    <div class="text-top-layer">
+                        <h2>ES6 JAVASCRIPT</h2>
+                        <button id="separate-view-button">EXPAND VIEW</button>
+                    </div>
                 </div>
                 <div class="text-container text-four">
                     <h2>ELM</h2>
@@ -98,10 +78,10 @@
     </body>
     <script type="text/javascript" src="Games/elm.js"></script>
     <script>
-        var app = Elm.Main.embed(document.getElementById('elm-app'))
-        app.ports.data.subscribe((data) => {
-            console.log(data);
-        })
+        // var app = Elm.Main.embed(document.getElementsByClassName('elm-app')[0])
+        // app.ports.data.subscribe((data) => {
+        //     //console.log(data);
+        // })
     </script>
     <script type="module" src="GameBoard/State.js"></script>
     <script type="module" src="GameBoard/GameBoard.js"></script>

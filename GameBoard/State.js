@@ -14,7 +14,7 @@ export function state() {
     const newState = {};
 
     for (let key in state) {
-      if ((key = property)) {
+      if (key === property) {
         newState[property] = value;
       } else {
         newState[key] = state[key];

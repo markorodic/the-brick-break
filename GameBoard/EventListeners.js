@@ -18,6 +18,9 @@ window.onload = function() {
   new Game("game-three-bricks", "bricks", "green", 0.5);
   new Game("game-three-ball", "ball", "green", 0.5);
   new Game("game-three-paddle", "paddle", "green", 0.5);
+  new Game("game-four-bricks", "bricks", "green", 0.5);
+  new Game("game-four-ball", "ball", "green", 0.5);
+  new Game("game-four-paddle", "paddle", "green", 0.5);
 };
 
 export function registerEventListeners() {
