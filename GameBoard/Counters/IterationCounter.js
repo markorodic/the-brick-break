@@ -29,12 +29,9 @@ export class IterationCounter {
         });
       } else if (this.frameCount === 2000) {
         this.frameCount++;
-        window.DO_THA_REPORT_PLEASE(this.frameLog, this.name);
-        if (
-          ++iteratorCounter >=
-          NUMBER_OF_ITERATORS
-        ) {
-          window.PLEASE_CLOSE_ME()
+        // window.DO_THA_REPORT_PLEASE(this.frameLog, this.name);
+        if (++iteratorCounter >= NUMBER_OF_ITERATORS) {
+          // window.PLEASE_CLOSE_ME();
         }
       }
     }

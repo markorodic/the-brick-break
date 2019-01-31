@@ -74,3 +74,36 @@ export const colours = {
     rowFourteen: "rgba(0, 255, 114, 0.5)"
   }
 };
+
+export const whichColour = function(yPostion, themeColour) {
+  switch (yPostion) {
+    case 0:
+      return colours[themeColour].rowOne;
+    case 1:
+      return colours[themeColour].rowTwo;
+    case 2:
+      return colours[themeColour].rowThree;
+    case 3:
+      return colours[themeColour].rowFour;
+    case 4:
+      return colours[themeColour].rowFive;
+    case 5:
+      return colours[themeColour].rowSix;
+    case 6:
+      return colours[themeColour].rowSeven;
+    case 7:
+      return colours[themeColour].rowEight;
+    case 8:
+      return colours[themeColour].rowNine;
+    case 9:
+      return colours[themeColour].rowTen;
+    case 10:
+      return colours[themeColour].rowEleven;
+    case 11:
+      return colours[themeColour].rowTwelve;
+    case 12:
+      return colours[themeColour].rowThirteen;
+    case 13:
+      return colours[themeColour].rowFourteen;
+  }
+};

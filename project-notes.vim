@@ -2,7 +2,6 @@
 
 **Elm**
 Use lazy evaluation for the view
-Add fps and iteration counters - figure out a way for them to speak with outside world
 Figure out how to inject this into the game project
 Render three games with different views
 

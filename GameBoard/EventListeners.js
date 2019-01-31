@@ -1,6 +1,7 @@
 import {
   gameRotateBoard,
-  gameIsolateGameBodies
+  gameIsolateGameBodies,
+  gamePlayGameSimulation
 } from "./GameMutations/GameMutations.js";
 import { DOMNode } from "./Utilities/Utilities.js";
 import { Game } from "../Games/vanilla-js-game/Game.js";
@@ -14,12 +15,9 @@ window.onload = function() {
   game("game-two-bricks", "bricks");
   game("game-two-ball", "ball");
   game("game-two-paddle", "paddle");
-  new Game("game-three-bricks", "bricks", "red", 0.5);
-  new Game("game-three-ball", "ball", "red", 0.5);
-  new Game("game-three-paddle", "paddle", "red", 0.5);
-  new Game("game-four-bricks", "bricks", "green", 0.5);
-  new Game("game-four-ball", "ball", "green", 0.5);
-  new Game("game-four-paddle", "paddle", "green", 0.5);
+  new Game("game-three-bricks", "bricks", "green", 0.5);
+  new Game("game-three-ball", "ball", "green", 0.5);
+  new Game("game-three-paddle", "paddle", "green", 0.5);
 };
 
 export function registerEventListeners() {
@@ -28,6 +26,8 @@ export function registerEventListeners() {
   addEventListenerOnClick(separateViewButton, gameIsolateGameBodies);
   const rotateGameBoardButton = DOMNode("rotate-game-board-button");
   addEventListenerOnClick(rotateGameBoardButton, gameRotateBoard);
+  const spinGameBoardButton = DOMNode("play-game-board-button");
+  addEventListenerOnClick(spinGameBoardButton, gamePlayGameSimulation);
 }
 
 function addEventListenerOnClick(element, callBack) {

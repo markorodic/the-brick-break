@@ -12,13 +12,14 @@ body {
 
 #button-container {
     display: flex;
-    flex-direction: column;
     opacity: 1;
     transition: opacity 0.8s ease-in;
     margin-top: -3rem;
+    width: 26rem;
+    justify-content: space-around;
 }
 
-.switch-button {
+.loop-button, .switch-button, .play-button {
     border: none;
     margin-bottom: 0.7rem;
     background: none;
@@ -28,6 +29,16 @@ body {
     font: inherit;
     cursor: pointer;
     outline: inherit;
+    z-index: 100;
+}
+
+.loop-button-container, .rotate-button-container, .play-button-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.loop-button, .switch-button, .play-button {
+    height: 4rem;
 }
 
 .switch-button img {
@@ -47,6 +58,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.root-container .increase-spin {
+    animation-duration: 40ms;
+    transition: 30s;
 }
 
 .first-game {

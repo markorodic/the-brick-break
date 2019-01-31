@@ -85,6 +85,5 @@ export function rotateBoard() {
     changeClassToGame(boardElement, boardElementClass);
   }
 
-  flashText();
   rotateBoard();
 }

@@ -17,7 +17,7 @@ function drawBall({ state, ctx }) {
   if (state.body === "ball") {
     const { ballPosition } = state;
 
-    ctx.fillStyle = "#C6494B";
+    ctx.fillStyle = "blue";
     ctx.fillRect(
       ballPosition.x,
       ballPosition.y,
@@ -58,19 +58,19 @@ function drawPaddle({ state, ctx }) {
 let fpsCount = 0;
 
 function drawStats() {
-  if (fpsCount % 100 === 1) {
-    document.getElementById(
-      "fpsFunctional"
-    ).textContent = iterationCounterLoop.getData();
-    document.getElementById(
-      "fpsFunctionalUpdate"
-    ).textContent = iterationCounterUpdate.getData("functional update");
-    document.getElementById(
-      "fpsFunctionalUpdateBall"
-    ).textContent = iterationCounterBall.getData("functional update ball");
-    document.getElementById(
-      "fpsFunctionalNew"
-    ).textContent = framesPerSecondCounter.getData("functional New");
-  }
-  fpsCount++;
+  // if (fpsCount % 100 === 1) {
+  //   document.getElementById(
+  //     "fpsFunctional"
+  //   ).textContent = iterationCounterLoop.getData();
+  //   document.getElementById(
+  //     "fpsFunctionalUpdate"
+  //   ).textContent = iterationCounterUpdate.getData("functional update");
+  //   document.getElementById(
+  //     "fpsFunctionalUpdateBall"
+  //   ).textContent = iterationCounterBall.getData("functional update ball");
+  //   document.getElementById(
+  //     "fpsFunctionalNew"
+  //   ).textContent = framesPerSecondCounter.getData("functional New");
+  // }
+  // fpsCount++;
 }

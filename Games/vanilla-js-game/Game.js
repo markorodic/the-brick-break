@@ -2,7 +2,7 @@ import { drawToScreen } from "./Draw.js";
 import { Paddle } from "./Paddle.js";
 import { Ball } from "./Ball.js";
 import { collisions } from "./Collisions.js";
-import { colours } from "./Colours.js";
+import { colours } from "../../GameBoard/Colours.js";
 import { IterationCounter } from "../../GameBoard/Counters/IterationCounter.js";
 import { FramesPerSecondCounter } from "../../GameBoard/Counters/FramesPerSecond.js";
 
@@ -76,12 +76,12 @@ Game.prototype = {
         this.bodies.bricks[i].colour
       );
     }
-    if (this.fpsCount % 100 === 1) {
-      drawToScreen.framesPerSecondCounter(
-        this.framesPerSecondCounter.getData()
-      );
-      drawToScreen.iterationCounter(this.iterationCounter.getData());
-    }
-    this.fpsCount++;
+    // if (this.fpsCount % 100 === 1) {
+    //   drawToScreen.framesPerSecondCounter(
+    //     this.framesPerSecondCounter.getData()
+    //   );
+    //   drawToScreen.iterationCounter(this.iterationCounter.getData());
+    // }
+    // this.fpsCount++;
   }
 };
