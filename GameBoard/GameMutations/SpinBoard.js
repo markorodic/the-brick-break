@@ -1,9 +1,25 @@
 import { DOMNode } from "../Utilities/Utilities.js";
 import { hideText } from "./Text.js";
+import { Game } from "../../Games/vanilla-js-game/Game.js";
 
 export function playGameSimulation() {
   hideText();
-  cycleThroughBoardColours();
+
+  // call new game with increase ball speed
+  new Game("game-one-bricks", "bricks", "blue", 6);
+  new Game("game-two-bricks", "bricks", "red", 4);
+  new Game("game-three-bricks", "bricks", "green", 6);
+  new Game("game-four-bricks", "bricks", "yellow", 6);
+
+  let count = 0;
+  function changeColour() {
+    count++;
+    cycleThroughBoardColours(count);
+    if (count === 100) {
+      clearInterval(to);
+    }
+  }
+  var to = setInterval(changeColour, 500);
 
   //   setTimeout(() => {
   //     spinGameBoardButton.classList.add("increase-spin");
@@ -15,40 +31,26 @@ export function playGameSimulation() {
   //     count++;
   //   }, 500);
 }
-function cycleThroughBoardColours() {
-  let count = 0;
-  while (count < 100) {
-    switch (count % 3) {
-      case 0:
-        // change the top game to 2
-        console.log(0);
-        break;
-      case 1:
-        // change the top game to 3
-        console.log(1);
-        break;
-      case 2:
-        // change the top game to 4
-        console.log(2);
-        break;
-      case 3:
-        // change the top game to 1
-        console.log(3);
-        break;
-      default:
-        return;
-    }
-    count++;
+function cycleThroughBoardColours(count) {
+  switch (count % 4) {
+    case 0:
+      changeTopGame("game-one", "game-two");
+      break;
+    case 1:
+      changeTopGame("game-two", "game-three");
+      break;
+    case 2:
+      changeTopGame("game-three", "game-four");
+      break;
+    case 3:
+      changeTopGame("game-four", "game-one");
+      break;
+    default:
+      return;
   }
 }
 
 changeTopGame("game-one", "game-two");
-
-changeTopGame("game-two", "game-three");
-
-changeTopGame("game-three", "game-four");
-
-changeTopGame("game-four", "game-one");
 
 function changeTopGame(currentTopGameId, newTopGameId) {
   const currentTopGameElement = DOMNode(currentTopGameId);

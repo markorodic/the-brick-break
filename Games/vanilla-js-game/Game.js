@@ -23,18 +23,17 @@ export function Game(canvasId, mainGameEntity, themeColour, ballVelocity) {
   };
   this.score = 0;
   this.lives = 3;
-  this.framesPerSecondCounter = new FramesPerSecondCounter();
-  this.iterationCounter = new IterationCounter();
-  this.fpsCount = 0;
+  this.stopped = false;
 
   var self = this;
 
   function playGame() {
-    self.iterationCounter.startCalc("vanilla");
-    self.framesPerSecondCounter.calcData("vanilla");
+    if (self.stopped) {
+      ctx.clearRect(0, 0, self.gameSize.x, self.gameSize.y);
+      return;
+    }
     self.update();
     self.draw(ctx, canvas);
-    self.iterationCounter.endCalc("vanilla");
     requestAnimationFrame(playGame);
   }
   playGame();
@@ -76,12 +75,8 @@ Game.prototype = {
         this.bodies.bricks[i].colour
       );
     }
-    // if (this.fpsCount % 100 === 1) {
-    //   drawToScreen.framesPerSecondCounter(
-    //     this.framesPerSecondCounter.getData()
-    //   );
-    //   drawToScreen.iterationCounter(this.iterationCounter.getData());
-    // }
-    // this.fpsCount++;
+  },
+  stopGame: function() {
+    this.stopped = true;
   }
 };
