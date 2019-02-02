@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vanilla Javascript Game Test</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="game-container">
+            <div class="elm-app"></div>
+            <section class="text-top-layer">
+                <h2>ELM</h2>
+            </section>
+        </div>
+    </body>
+    <script type="text/javascript" src="js/elm.js"></script>
+    <script>
+        var app = Elm.Main.embed(document.getElementsByClassName('elm-app')[0])
+    </script>
+</html>
