@@ -1,10 +1,4 @@
 import { CONSTANTS } from "./Constants.js";
-import {
-  framesPerSecondCounter,
-  iterationCounterLoop,
-  iterationCounterUpdate,
-  iterationCounterBall
-} from "./Game.js";
 
 export function draw(state, canvas, ctx) {
   [drawBall, drawPaddle, drawBricks, drawStats].forEach(function(drawFunction) {
@@ -53,24 +47,4 @@ function drawPaddle({ state, ctx }) {
       CONSTANTS.PADDLE.SIZE.height
     );
   }
-}
-
-let fpsCount = 0;
-
-function drawStats() {
-  // if (fpsCount % 100 === 1) {
-  //   document.getElementById(
-  //     "fpsFunctional"
-  //   ).textContent = iterationCounterLoop.getData();
-  //   document.getElementById(
-  //     "fpsFunctionalUpdate"
-  //   ).textContent = iterationCounterUpdate.getData("functional update");
-  //   document.getElementById(
-  //     "fpsFunctionalUpdateBall"
-  //   ).textContent = iterationCounterBall.getData("functional update ball");
-  //   document.getElementById(
-  //     "fpsFunctionalNew"
-  //   ).textContent = framesPerSecondCounter.getData("functional New");
-  // }
-  // fpsCount++;
 }

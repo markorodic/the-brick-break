@@ -17,6 +17,7 @@ body {
     margin-top: -3rem;
     width: 26rem;
     justify-content: space-around;
+    z-index: 100;
 }
 
 .loop-button, .switch-button, .play-button {
@@ -137,7 +138,6 @@ canvas {
     width: 100%;
     opacity: 1;
     transition: 0.5s;
-    transition-delay: 3s;
     /* display: flex;
     justify-content: center;
     align-items: center; */
@@ -170,7 +170,6 @@ canvas {
 
 #game-board .hide {
     opacity: 0;
-    transition-delay: 0s;
 }
 
 
