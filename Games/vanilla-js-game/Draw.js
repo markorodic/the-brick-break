@@ -5,6 +5,7 @@ export const drawToScreen = {
   drawRect: function(ctx, body, colour) {
     if (body.shouldBeVisible) {
       ctx.fillStyle = colour;
+      // ctx.globalCompositeOperation = "lighter";
     } else {
       ctx.fillStyle = "rgba(0, 0, 200, 0)";
     }

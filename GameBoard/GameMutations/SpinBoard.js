@@ -6,10 +6,10 @@ export function playGameSimulation() {
   hideText();
 
   // call new game with increase ball speed
-  new Game("game-one-bricks", "bricks", "blue", 6);
-  new Game("game-two-bricks", "bricks", "red", 4);
-  new Game("game-three-bricks", "bricks", "green", 6);
-  new Game("game-four-bricks", "bricks", "yellow", 6);
+  new Game("game-one-bricks", "bricks", "blue", 1);
+  new Game("game-two-bricks", "bricks", "red", 1);
+  new Game("game-three-bricks", "bricks", "green", 1);
+  new Game("game-four-bricks", "bricks", "yellow", 1);
 
   let count = 0;
   function changeColour() {
@@ -49,8 +49,6 @@ function cycleThroughBoardColours(count) {
       return;
   }
 }
-
-changeTopGame("game-one", "game-two");
 
 function changeTopGame(currentTopGameId, newTopGameId) {
   const currentTopGameElement = DOMNode(currentTopGameId);
