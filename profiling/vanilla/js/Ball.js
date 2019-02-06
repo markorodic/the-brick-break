@@ -27,7 +27,6 @@ Ball.prototype = {
     this.position.x += this.velocity.x;
     this.position.y += this.velocity.y;
     const brickShouldBounce = collisions.betweenBallAndBrick(this, bricks);
-    console.log(brickShouldBounce);
     if (brickShouldBounce === "x") {
       this.velocity.x = -this.velocity.x;
     }

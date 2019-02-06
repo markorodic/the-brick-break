@@ -36,7 +36,7 @@ describe("the system", () => {
     await deferred;
   });
 
-  it.skip("should produce more reports", async () => {
+  it("should produce more reports", async () => {
     const page = await browser.newPage();
     console.log("test start");
 
@@ -55,7 +55,7 @@ describe("the system", () => {
     await deferred;
   });
 
-  it("should produce more reports", async () => {
+  it.skip("should produce more reports", async () => {
     const page = await browser.newPage();
     console.log("test start");
 
@@ -63,8 +63,6 @@ describe("the system", () => {
       console.log("got data for second test", data.length);
       // testing continues here
       const dataSum = data.reduce((sum, datum, index) => {
-        console.log(datum);
-
         return sum + datum.delta;
       }, 0);
       const dataMean = dataSum / data.length;

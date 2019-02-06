@@ -1,3 +1,6 @@
+body {
+    background: black;
+}
 .game-container {
     display: flex;
     flex-direction: column;

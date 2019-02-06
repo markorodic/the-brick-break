@@ -1,6 +1,15 @@
-body {
+html {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+ }
+ 
+ body {
+    margin: 0px;
+    min-height: 100%;
+    width: 100%;
     font-family: sans-serif;
-}
+ }
 
 .root-container {
     display: flex;
@@ -15,7 +24,8 @@ body {
     opacity: 1;
     transition: opacity 0.8s ease-in;
     margin-top: -3rem;
-    width: 26rem;
+    max-width: 26rem;
+    width: 100%;
     justify-content: space-around;
     z-index: 100;
 }
@@ -88,7 +98,8 @@ body {
 
 #information-container {
     position: relative;
-    width: 35rem;
+    max-width: 35rem;
+    width: 100%;
     opacity: 1;
     transition: opacity 0.8s ease-in;
 }
