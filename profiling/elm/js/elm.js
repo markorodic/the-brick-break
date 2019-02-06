@@ -19945,14 +19945,14 @@ var _user$project$Constants$paddleAttributes = {
 	width: 60,
 	height: 5,
 	yPosition: 495,
-	startPosition: 175,
+	startPosition: 0,
 	velocity: {left: -5, right: 5}
 };
 var _user$project$Constants$ballAttributes = {
 	width: 5,
 	height: 5,
 	startVelocity: {x: 2, y: 2},
-	startPosition: {x: 200, y: 275}
+	startPosition: {x: 250, y: 475}
 };
 var _user$project$Constants$gameAttributes = {width: 500, height: 500, score: 0, lives: 3};
 
@@ -19968,7 +19968,7 @@ var _user$project$Messages$KeyDown = function (a) {
 
 var _user$project$Model_Ball$initBall = {
 	position: _user$project$Constants$ballAttributes.startPosition,
-	velocity: {x: 0, y: 0}
+	velocity: {x: 1, y: 1}
 };
 var _user$project$Model_Ball$BallValue = F2(
 	function (a, b) {
@@ -20028,7 +20028,7 @@ var _user$project$Model_Game$Play = {ctor: 'Play'};
 var _user$project$Model_Game$Start = {ctor: 'Start'};
 var _user$project$Model_Game$initGame = {score: 0, lives: 3, state: _user$project$Model_Game$Start};
 
-var _user$project$Model_Paddle$initPaddle = {position: 200, velocity: 0};
+var _user$project$Model_Paddle$initPaddle = {position: _user$project$Constants$paddleAttributes.startPosition, velocity: 0};
 var _user$project$Model_Paddle$InitPaddle = F2(
 	function (a, b) {
 		return {position: a, velocity: b};
@@ -20080,7 +20080,7 @@ var _user$project$Update_Paddle$updatePaddle = function (model) {
 			paddle: _elm_lang$core$Native_Utils.update(
 				paddle,
 				{
-					position: _user$project$Update_Paddle$mapBallPositionToPaddlePosition(ball.position)
+					position: _user$project$Update_Paddle$mapBallPositionToPaddlePosition(ball.position) - 10
 				})
 		});
 };
@@ -20396,12 +20396,21 @@ var _user$project$View_StyleSheet$colours = {
 	black: A3(_elm_lang$core$Color$rgb, 0, 0, 0),
 	offBlack: A3(_elm_lang$core$Color$rgb, 20, 20, 20),
 	grey: A3(_elm_lang$core$Color$rgb, 142, 142, 142),
-	red: A3(_elm_lang$core$Color$rgb, 198, 73, 75),
-	tomato: A3(_elm_lang$core$Color$rgb, 196, 108, 64),
-	orange: A3(_elm_lang$core$Color$rgb, 179, 121, 56),
-	yellow: A3(_elm_lang$core$Color$rgb, 162, 161, 54),
-	green: A3(_elm_lang$core$Color$rgb, 75, 159, 76),
-	purple: A3(_elm_lang$core$Color$rgb, 67, 77, 197)
+	main: A3(_elm_lang$core$Color$rgb, 182, 206, 0),
+	rowOne: A3(_elm_lang$core$Color$rgb, 182, 206, 0),
+	rowTwo: A3(_elm_lang$core$Color$rgb, 202, 229, 0),
+	rowThree: A3(_elm_lang$core$Color$rgb, 225, 225, 0),
+	rowFour: A3(_elm_lang$core$Color$rgb, 226, 255, 12),
+	rowFive: A3(_elm_lang$core$Color$rgb, 227, 255, 76),
+	rowSix: A3(_elm_lang$core$Color$rgb, 230, 255, 43),
+	rowSeven: A3(_elm_lang$core$Color$rgb, 232, 255, 63),
+	rowEight: A3(_elm_lang$core$Color$rgb, 234, 255, 81),
+	rowNine: A3(_elm_lang$core$Color$rgb, 236, 255, 99),
+	rowTen: A3(_elm_lang$core$Color$rgb, 238, 255, 113),
+	rowEleven: A3(_elm_lang$core$Color$rgb, 240, 255, 132),
+	rowTweleve: A3(_elm_lang$core$Color$rgb, 242, 255, 147),
+	rowThirteen: A3(_elm_lang$core$Color$rgb, 244, 255, 165),
+	rowFourteen: A3(_elm_lang$core$Color$rgb, 246, 255, 183)
 };
 var _user$project$View_StyleSheet$GameOver = {ctor: 'GameOver'};
 var _user$project$View_StyleSheet$Bricks = function (a) {
@@ -20413,12 +20422,20 @@ var _user$project$View_StyleSheet$Game = {ctor: 'Game'};
 var _user$project$View_StyleSheet$Text = {ctor: 'Text'};
 var _user$project$View_StyleSheet$GameBackground = {ctor: 'GameBackground'};
 var _user$project$View_StyleSheet$WindowBackground = {ctor: 'WindowBackground'};
-var _user$project$View_StyleSheet$Red = {ctor: 'Red'};
-var _user$project$View_StyleSheet$Tomato = {ctor: 'Tomato'};
-var _user$project$View_StyleSheet$Orange = {ctor: 'Orange'};
-var _user$project$View_StyleSheet$Yellow = {ctor: 'Yellow'};
-var _user$project$View_StyleSheet$Green = {ctor: 'Green'};
-var _user$project$View_StyleSheet$Purple = {ctor: 'Purple'};
+var _user$project$View_StyleSheet$RowFourteen = {ctor: 'RowFourteen'};
+var _user$project$View_StyleSheet$RowThirteen = {ctor: 'RowThirteen'};
+var _user$project$View_StyleSheet$RowTwelve = {ctor: 'RowTwelve'};
+var _user$project$View_StyleSheet$RowEleven = {ctor: 'RowEleven'};
+var _user$project$View_StyleSheet$RowTen = {ctor: 'RowTen'};
+var _user$project$View_StyleSheet$RowNine = {ctor: 'RowNine'};
+var _user$project$View_StyleSheet$RowEight = {ctor: 'RowEight'};
+var _user$project$View_StyleSheet$RowSeven = {ctor: 'RowSeven'};
+var _user$project$View_StyleSheet$RowSix = {ctor: 'RowSix'};
+var _user$project$View_StyleSheet$RowFive = {ctor: 'RowFive'};
+var _user$project$View_StyleSheet$RowFour = {ctor: 'RowFour'};
+var _user$project$View_StyleSheet$RowThree = {ctor: 'RowThree'};
+var _user$project$View_StyleSheet$RowTwo = {ctor: 'RowTwo'};
+var _user$project$View_StyleSheet$RowOne = {ctor: 'RowOne'};
 var _user$project$View_StyleSheet$stylesheet = _mdgriffith$style_elements$Style$styleSheet(
 	{
 		ctor: '::',
@@ -20445,7 +20462,7 @@ var _user$project$View_StyleSheet$stylesheet = _mdgriffith$style_elements$Style$
 						_user$project$View_StyleSheet$Ball,
 						{
 							ctor: '::',
-							_0: _mdgriffith$style_elements$Style_Color$background(_user$project$View_StyleSheet$colours.red),
+							_0: _mdgriffith$style_elements$Style_Color$background(_user$project$View_StyleSheet$colours.main),
 							_1: {ctor: '[]'}
 						}),
 					_1: {
@@ -20455,70 +20472,158 @@ var _user$project$View_StyleSheet$stylesheet = _mdgriffith$style_elements$Style$
 							_user$project$View_StyleSheet$Paddle,
 							{
 								ctor: '::',
-								_0: _mdgriffith$style_elements$Style_Color$background(_user$project$View_StyleSheet$colours.red),
+								_0: _mdgriffith$style_elements$Style_Color$background(_user$project$View_StyleSheet$colours.main),
 								_1: {ctor: '[]'}
 							}),
 						_1: {
 							ctor: '::',
 							_0: A2(
 								_mdgriffith$style_elements$Style$style,
-								_user$project$View_StyleSheet$Bricks(_user$project$View_StyleSheet$Purple),
+								_user$project$View_StyleSheet$Bricks(_user$project$View_StyleSheet$RowOne),
 								{
 									ctor: '::',
-									_0: _mdgriffith$style_elements$Style_Color$background(_user$project$View_StyleSheet$colours.purple),
+									_0: _mdgriffith$style_elements$Style_Color$background(_user$project$View_StyleSheet$colours.rowOne),
 									_1: {ctor: '[]'}
 								}),
 							_1: {
 								ctor: '::',
 								_0: A2(
 									_mdgriffith$style_elements$Style$style,
-									_user$project$View_StyleSheet$Bricks(_user$project$View_StyleSheet$Green),
+									_user$project$View_StyleSheet$Bricks(_user$project$View_StyleSheet$RowTwo),
 									{
 										ctor: '::',
-										_0: _mdgriffith$style_elements$Style_Color$background(_user$project$View_StyleSheet$colours.green),
+										_0: _mdgriffith$style_elements$Style_Color$background(_user$project$View_StyleSheet$colours.rowTwo),
 										_1: {ctor: '[]'}
 									}),
 								_1: {
 									ctor: '::',
 									_0: A2(
 										_mdgriffith$style_elements$Style$style,
-										_user$project$View_StyleSheet$Bricks(_user$project$View_StyleSheet$Yellow),
+										_user$project$View_StyleSheet$Bricks(_user$project$View_StyleSheet$RowThree),
 										{
 											ctor: '::',
-											_0: _mdgriffith$style_elements$Style_Color$background(_user$project$View_StyleSheet$colours.yellow),
+											_0: _mdgriffith$style_elements$Style_Color$background(_user$project$View_StyleSheet$colours.rowThree),
 											_1: {ctor: '[]'}
 										}),
 									_1: {
 										ctor: '::',
 										_0: A2(
 											_mdgriffith$style_elements$Style$style,
-											_user$project$View_StyleSheet$Bricks(_user$project$View_StyleSheet$Orange),
+											_user$project$View_StyleSheet$Bricks(_user$project$View_StyleSheet$RowFour),
 											{
 												ctor: '::',
-												_0: _mdgriffith$style_elements$Style_Color$background(_user$project$View_StyleSheet$colours.orange),
+												_0: _mdgriffith$style_elements$Style_Color$background(_user$project$View_StyleSheet$colours.rowFour),
 												_1: {ctor: '[]'}
 											}),
 										_1: {
 											ctor: '::',
 											_0: A2(
 												_mdgriffith$style_elements$Style$style,
-												_user$project$View_StyleSheet$Bricks(_user$project$View_StyleSheet$Tomato),
+												_user$project$View_StyleSheet$Bricks(_user$project$View_StyleSheet$RowFive),
 												{
 													ctor: '::',
-													_0: _mdgriffith$style_elements$Style_Color$background(_user$project$View_StyleSheet$colours.tomato),
+													_0: _mdgriffith$style_elements$Style_Color$background(_user$project$View_StyleSheet$colours.rowFive),
 													_1: {ctor: '[]'}
 												}),
 											_1: {
 												ctor: '::',
 												_0: A2(
 													_mdgriffith$style_elements$Style$style,
-													_user$project$View_StyleSheet$Bricks(_user$project$View_StyleSheet$Red),
+													_user$project$View_StyleSheet$Bricks(_user$project$View_StyleSheet$RowSix),
 													{
 														ctor: '::',
-														_0: _mdgriffith$style_elements$Style_Color$background(_user$project$View_StyleSheet$colours.red),
+														_0: _mdgriffith$style_elements$Style_Color$background(_user$project$View_StyleSheet$colours.rowSix),
 														_1: {ctor: '[]'}
 													}),
-												_1: {ctor: '[]'}
+												_1: {
+													ctor: '::',
+													_0: A2(
+														_mdgriffith$style_elements$Style$style,
+														_user$project$View_StyleSheet$Bricks(_user$project$View_StyleSheet$RowSeven),
+														{
+															ctor: '::',
+															_0: _mdgriffith$style_elements$Style_Color$background(_user$project$View_StyleSheet$colours.rowSeven),
+															_1: {ctor: '[]'}
+														}),
+													_1: {
+														ctor: '::',
+														_0: A2(
+															_mdgriffith$style_elements$Style$style,
+															_user$project$View_StyleSheet$Bricks(_user$project$View_StyleSheet$RowEight),
+															{
+																ctor: '::',
+																_0: _mdgriffith$style_elements$Style_Color$background(_user$project$View_StyleSheet$colours.rowEight),
+																_1: {ctor: '[]'}
+															}),
+														_1: {
+															ctor: '::',
+															_0: A2(
+																_mdgriffith$style_elements$Style$style,
+																_user$project$View_StyleSheet$Bricks(_user$project$View_StyleSheet$RowNine),
+																{
+																	ctor: '::',
+																	_0: _mdgriffith$style_elements$Style_Color$background(_user$project$View_StyleSheet$colours.rowNine),
+																	_1: {ctor: '[]'}
+																}),
+															_1: {
+																ctor: '::',
+																_0: A2(
+																	_mdgriffith$style_elements$Style$style,
+																	_user$project$View_StyleSheet$Bricks(_user$project$View_StyleSheet$RowTen),
+																	{
+																		ctor: '::',
+																		_0: _mdgriffith$style_elements$Style_Color$background(_user$project$View_StyleSheet$colours.rowTen),
+																		_1: {ctor: '[]'}
+																	}),
+																_1: {
+																	ctor: '::',
+																	_0: A2(
+																		_mdgriffith$style_elements$Style$style,
+																		_user$project$View_StyleSheet$Bricks(_user$project$View_StyleSheet$RowEleven),
+																		{
+																			ctor: '::',
+																			_0: _mdgriffith$style_elements$Style_Color$background(_user$project$View_StyleSheet$colours.rowEleven),
+																			_1: {ctor: '[]'}
+																		}),
+																	_1: {
+																		ctor: '::',
+																		_0: A2(
+																			_mdgriffith$style_elements$Style$style,
+																			_user$project$View_StyleSheet$Bricks(_user$project$View_StyleSheet$RowTwelve),
+																			{
+																				ctor: '::',
+																				_0: _mdgriffith$style_elements$Style_Color$background(_user$project$View_StyleSheet$colours.rowTweleve),
+																				_1: {ctor: '[]'}
+																			}),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(
+																				_mdgriffith$style_elements$Style$style,
+																				_user$project$View_StyleSheet$Bricks(_user$project$View_StyleSheet$RowThirteen),
+																				{
+																					ctor: '::',
+																					_0: _mdgriffith$style_elements$Style_Color$background(_user$project$View_StyleSheet$colours.rowThirteen),
+																					_1: {ctor: '[]'}
+																				}),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(
+																					_mdgriffith$style_elements$Style$style,
+																					_user$project$View_StyleSheet$Bricks(_user$project$View_StyleSheet$RowFourteen),
+																					{
+																						ctor: '::',
+																						_0: _mdgriffith$style_elements$Style_Color$background(_user$project$View_StyleSheet$colours.rowFourteen),
+																						_1: {ctor: '[]'}
+																					}),
+																				_1: {ctor: '[]'}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
 											}
 										}
 									}
@@ -20557,39 +20662,46 @@ var _user$project$View$assignBrickColour = function (row) {
 	var _p0 = row;
 	switch (_p0) {
 		case 0:
-			return _user$project$View_StyleSheet$Red;
+			return _user$project$View_StyleSheet$RowOne;
 		case 1:
-			return _user$project$View_StyleSheet$Tomato;
+			return _user$project$View_StyleSheet$RowTwo;
 		case 2:
-			return _user$project$View_StyleSheet$Orange;
+			return _user$project$View_StyleSheet$RowThree;
 		case 3:
-			return _user$project$View_StyleSheet$Yellow;
+			return _user$project$View_StyleSheet$RowFour;
 		case 4:
-			return _user$project$View_StyleSheet$Green;
+			return _user$project$View_StyleSheet$RowFive;
 		case 5:
-			return _user$project$View_StyleSheet$Purple;
+			return _user$project$View_StyleSheet$RowSix;
+		case 6:
+			return _user$project$View_StyleSheet$RowSeven;
+		case 7:
+			return _user$project$View_StyleSheet$RowEight;
+		case 8:
+			return _user$project$View_StyleSheet$RowNine;
+		case 9:
+			return _user$project$View_StyleSheet$RowTen;
+		case 10:
+			return _user$project$View_StyleSheet$RowEleven;
+		case 11:
+			return _user$project$View_StyleSheet$RowTwelve;
+		case 12:
+			return _user$project$View_StyleSheet$RowThirteen;
+		case 13:
+			return _user$project$View_StyleSheet$RowFourteen;
 		default:
-			return _user$project$View_StyleSheet$Purple;
+			return _user$project$View_StyleSheet$RowFourteen;
 	}
 };
 var _user$project$View$displayBricks = function (b) {
-	return _mdgriffith$style_elements$Element$html(
-		A2(
-			_elm_lang$html$Html_Lazy$lazy,
-			function (brick) {
-				return A2(
-					_mdgriffith$style_elements$Element$layout,
-					_user$project$View_StyleSheet$stylesheet,
-					A5(
-						_user$project$View$makeBlock,
-						_elm_lang$core$Basics$toFloat(brick.position.x),
-						_elm_lang$core$Basics$toFloat(brick.position.y),
-						_elm_lang$core$Basics$toFloat(brick.size.width),
-						_elm_lang$core$Basics$toFloat(brick.size.height),
-						_user$project$View_StyleSheet$Bricks(
-							_user$project$View$assignBrickColour(brick.row))));
-			},
-			b));
+	return A5(
+		_user$project$View$makeBlock,
+		_elm_lang$core$Basics$toFloat(b.position.x),
+		_elm_lang$core$Basics$toFloat(b.position.y),
+		_elm_lang$core$Basics$toFloat(b.size.width),
+		_elm_lang$core$Basics$toFloat(b.size.height),
+		_user$project$View_StyleSheet$Bricks(
+			_user$project$View$assignBrickColour(b.row)));
 };
 var _user$project$View$displayPaddle = function (x) {
 	return A5(_user$project$View$makeBlock, x, _user$project$Constants$paddleAttributes.yPosition, _user$project$Constants$paddleAttributes.width, _user$project$Constants$paddleAttributes.height, _user$project$View_StyleSheet$Paddle);

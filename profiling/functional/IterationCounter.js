@@ -20,19 +20,20 @@ export class IterationCounter {
     const delta = this.endTime - this.startTime;
     this.frames.push(delta);
     if (REPORT_TEST) {
-      if (this.frameCount < 2000) {
+      if (this.frameCount < 1500) {
         this.frameCount++;
         this.frameLog.push({
           startTime: this.startTime,
           endTime: this.endTime,
           delta
         });
-      } else if (this.frameCount === 2000) {
+      } else if (this.frameCount === 1500) {
         this.frameCount++;
-        // window.DO_THA_REPORT_PLEASE(this.frameLog, this.name);
-        if (++iteratorCounter >= NUMBER_OF_ITERATORS) {
-          // window.PLEASE_CLOSE_ME();
-        }
+        console.log(iteratorCounter, NUMBER_OF_ITERATORS);
+        window.DO_THA_REPORT_PLEASE(this.frameLog, this.name);
+        // if (++iteratorCounter >= NUMBER_OF_ITERATORS) {
+        window.PLEASE_CLOSE_ME();
+        // }
       }
     }
     if (this.frames.length > 10) {

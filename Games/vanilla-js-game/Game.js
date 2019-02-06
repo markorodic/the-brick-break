@@ -3,8 +3,6 @@ import { Paddle } from "./Paddle.js";
 import { Ball } from "./Ball.js";
 import { collisions } from "./Collisions.js";
 import { colours } from "../../GameBoard/Colours.js";
-import { IterationCounter } from "../../GameBoard/Counters/IterationCounter.js";
-import { FramesPerSecondCounter } from "../../GameBoard/Counters/FramesPerSecond.js";
 
 export function Game(canvasId, mainGameEntity, themeColour, ballVelocity) {
   var canvas = document.getElementById(canvasId);
@@ -41,18 +39,12 @@ export function Game(canvasId, mainGameEntity, themeColour, ballVelocity) {
 
 Game.prototype = {
   update: function() {
-    var ball = this.bodies.ball;
-    var bricks = this.bodies.bricks;
-    var paddle = this.bodies.paddle;
+    const { ball, bricks, paddle } = this.bodies;
     var gameSize = this.gameSize;
 
     this.bodies.bricks = bricks.filter(function(brick) {
       return !collisions.brickCol(brick, ball);
     });
-    if (this.lives < 0) {
-      this.lives = 3;
-      this.score = 0;
-    }
     paddle.update(ball);
     ball.update(paddle, bricks, gameSize);
   },

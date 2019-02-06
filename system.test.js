@@ -19,9 +19,30 @@ describe("the system", () => {
 
   it("should produce reports", async () => {
     const page = await browser.newPage();
+    console.log("test start");
 
     await page.exposeFunction("DO_THA_REPORT_PLEASE", async data => {
       console.log("got data", data.length);
+      const dataSum = data.reduce((sum, datum, index) => {
+        console.log(datum);
+        return sum + datum.delta;
+      }, 0);
+      const dataMean = dataSum / data.length;
+      console.log(dataMean);
+    });
+
+    const deferred = waitForClose(page);
+    await page.goto("http://localhost:8000");
+    await deferred;
+  });
+
+  it.skip("should produce more reports", async () => {
+    const page = await browser.newPage();
+    console.log("test start");
+
+    await page.exposeFunction("DO_THA_REPORT_PLEASE", async data => {
+      console.log("got data for second test", data.length);
+      // testing continues here
       const dataSum = data.reduce((sum, datum, index) => {
         return sum + datum.delta;
       }, 0);
@@ -30,20 +51,28 @@ describe("the system", () => {
     });
 
     const deferred = waitForClose(page);
-    await page.goto("http://localhost:3000");
+    await page.goto("http://localhost:8001");
     await deferred;
   });
 
   it("should produce more reports", async () => {
     const page = await browser.newPage();
+    console.log("test start");
 
     await page.exposeFunction("DO_THA_REPORT_PLEASE", async data => {
       console.log("got data for second test", data.length);
       // testing continues here
+      const dataSum = data.reduce((sum, datum, index) => {
+        console.log(datum);
+
+        return sum + datum.delta;
+      }, 0);
+      const dataMean = dataSum / data.length;
+      console.log(dataMean);
     });
 
     const deferred = waitForClose(page);
-    await page.goto("http://localhost:3000");
+    await page.goto("http://localhost:8003");
     await deferred;
   });
 

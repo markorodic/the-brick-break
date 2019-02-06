@@ -15,7 +15,12 @@
         </div>
     </body>
     <script type="text/javascript" src="js/elm.js"></script>
+    <script type="text/javascript" src="IterationCounter.js"></script>
     <script>
+        const iterationCounter = new IterationCounter();
         var app = Elm.Main.embed(document.getElementsByClassName('elm-app')[0])
+        app.ports.data.subscribe((data) => {
+            iterationCounter.endCalc();
+        })
     </script>
 </html>

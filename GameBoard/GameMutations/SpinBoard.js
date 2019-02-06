@@ -4,7 +4,6 @@ import { Game } from "../../Games/vanilla-js-game/Game.js";
 
 export function playGameSimulation() {
   hideText();
-
   // call new game with increase ball speed
   new Game("game-one-bricks", "bricks", "blue", 1);
   new Game("game-two-bricks", "bricks", "red", 1);
@@ -13,28 +12,18 @@ export function playGameSimulation() {
 
   let count = 0;
   function changeColour() {
-    count++;
     cycleThroughBoardColours(count);
     if (count === 100) {
       clearInterval(to);
     }
+    count++;
   }
-  var to = setInterval(changeColour, 500);
-
-  //   setTimeout(() => {
-  //     spinGameBoardButton.classList.add("increase-spin");
-  //   }, 2000);
-  // let count = 0;
-  // while (count < 50) {
-  //   setTimeout(() => {
-  //     changeBoardColours(count);
-  //     count++;
-  //   }, 500);
+  var to = setInterval(changeColour, 1000);
 }
 function cycleThroughBoardColours(count) {
   switch (count % 4) {
     case 0:
-      changeTopGame("game-one", "game-two");
+      changeTopGame("game-one", "game-two", count);
       break;
     case 1:
       changeTopGame("game-two", "game-three");
@@ -50,11 +39,11 @@ function cycleThroughBoardColours(count) {
   }
 }
 
-function changeTopGame(currentTopGameId, newTopGameId) {
+function changeTopGame(currentTopGameId, newTopGameId, count) {
   const currentTopGameElement = DOMNode(currentTopGameId);
   const newTopGameElement = DOMNode(newTopGameId);
   setTimeout(() => {
     currentTopGameElement.classList.remove("top-game");
     newTopGameElement.classList.add("top-game");
-  }, 1700);
+  }, 2000);
 }

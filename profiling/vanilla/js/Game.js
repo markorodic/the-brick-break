@@ -3,6 +3,7 @@ import { Paddle } from "./Paddle.js";
 import { Ball } from "./Ball.js";
 import { collisions } from "./Collisions.js";
 import { colours } from "./Colours.js";
+import { IterationCounter } from "../IterationCounter.js";
 
 export function Game(canvasId) {
   var canvas = document.getElementById(canvasId);
@@ -15,6 +16,7 @@ export function Game(canvasId) {
   };
   this.score = 0;
   this.lives = 3;
+  this.iterationCounter = new IterationCounter();
 
   var self = this;
 
@@ -28,6 +30,7 @@ export function Game(canvasId) {
 
 Game.prototype = {
   update: function() {
+    this.iterationCounter.startCalc();
     var ball = this.bodies.ball;
     var bricks = this.bodies.bricks;
     var paddle = this.bodies.paddle;
@@ -42,6 +45,7 @@ Game.prototype = {
     }
     paddle.update(ball);
     ball.update(paddle, bricks, gameSize);
+    this.iterationCounter.endCalc();
   },
   draw: function(ctx) {
     ctx.clearRect(0, 0, this.gameSize.x, this.gameSize.y);

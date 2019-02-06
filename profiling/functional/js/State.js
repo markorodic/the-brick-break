@@ -1,4 +1,5 @@
 import { initBricks } from "./Bricks.js";
+import { IterationCounter } from "../IterationCounter.js";
 
 export const initialState = {
   score: 0,
@@ -9,5 +10,5 @@ export const initialState = {
   bricks: initBricks(),
   gameMode: "start",
   frames: [],
-  lastFrameTimeStamp: performance.now()
+  iterationCounter: new IterationCounter()
 };

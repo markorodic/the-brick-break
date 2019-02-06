@@ -17,26 +17,15 @@ export const drawToScreen = {
     );
   },
   drawBricks: function(game, themeColour, mainEntity) {
-    // const bricksShouldBeVisible = entity === "bricks";
     var bricks = [];
     for (var i = 0; i < 196; i++) {
       var xMultiple = i % 14;
       var yMultiple = Math.floor(i / 14);
       var x = 29 * xMultiple + 61;
       var y = 29 * yMultiple + 61;
-      // if (bricksShouldBeVisible) {
       var colour = whichColour(yMultiple, themeColour);
-      // } else {
-      //   colour = "rgba(0, 0, 200, 0)";
-      // }
       bricks.push(new Brick(game, { x: x, y: y }, colour, mainEntity));
     }
     return bricks;
   }
-  // iterationCounter: function(fpsData) {
-  //   document.getElementById("fpsVanilla").textContent = fpsData;
-  // },
-  // framesPerSecondCounter: function(fpsData) {
-  //   document.getElementById("fpsVanillaNew").textContent = fpsData;
-  // }
 };

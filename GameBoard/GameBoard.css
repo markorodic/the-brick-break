@@ -193,6 +193,7 @@ canvas {
     transform: rotate(0deg);
     z-index: 4;
     mix-blend-mode: normal;
+    opacity: 0.75;
 }
 
 #game-two {
@@ -200,6 +201,7 @@ canvas {
     transform: rotate(270deg);
     z-index: 3;
     mix-blend-mode: normal;
+    opacity: 0.75;
 }
 
 #game-three {
@@ -207,6 +209,7 @@ canvas {
     transform: rotate(180deg);
     z-index: 2;
     mix-blend-mode: normal;
+    opacity: 0.75;
 }
 
 #game-four {
@@ -214,10 +217,13 @@ canvas {
     transform: rotate(90deg);
     z-index: 1;
     mix-blend-mode: normal;
+    opacity: 0.75;
 }
 
 #game-board .top-game {
     z-index: 5;
+    opacity: 1;
+    transition: 2s;
 }
 
 .show-text {

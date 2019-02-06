@@ -38,8 +38,8 @@ window.onload = function() {
 
 export function registerEventListeners() {
   // Move domnode inside addeventlister
-  // const separateViewButton = DOMNode("separate-view-button");
-  // addEventListenerOnClick(separateViewButton, gameIsolateGameBodies);
+  const separateViewButton = DOMNode("separate-view-button");
+  addEventListenerOnClick(separateViewButton, gameIsolateGameBodies);
   const rotateGameBoardButton = DOMNode("rotate-game-board-button");
   addEventListenerOnClick(rotateGameBoardButton, gameRotateBoard);
   const spinGameBoardButton = DOMNode("play-game-board-button");

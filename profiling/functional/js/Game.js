@@ -2,6 +2,7 @@ import { initialState } from "./State.js";
 import { draw } from "./Draw.js";
 import { update } from "./Update3.js";
 import { collisionDetection } from "./Collisions.js";
+import { IterationCounter } from "../IterationCounter.js";
 
 export function game(canvasId) {
   const canvas = document.getElementById(canvasId);
