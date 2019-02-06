@@ -26,18 +26,27 @@ export const collisions = {
   betweenBallAndBrick: function(ball, bricks) {
     for (var i = 0; i < bricks.length; i++) {
       if (this.brickCol(bricks[i], ball)) {
-        return true;
+        return this.brickCol(bricks[i], ball);
       }
     }
   },
   brickCol: function(brick, ball) {
     var startX = brick.position.x - brick.size.x / 2;
     var startY = brick.position.y - brick.size.y / 2;
-    return (
+    if (
       ball.position.x > startX &&
       ball.position.x < startX + brick.size.x &&
       ball.position.y > startY &&
       ball.position.y < startY + brick.size.y
-    );
+    ) {
+      if (
+        ball.position.x > startX + 1 &&
+        ball.position.x < startX + brick.size.x - 1
+      ) {
+        return "y";
+      } else {
+        return "x";
+      }
+    }
   }
 };

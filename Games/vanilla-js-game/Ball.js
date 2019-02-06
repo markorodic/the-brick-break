@@ -27,9 +27,12 @@ Ball.prototype = {
     }
     this.position.x += this.velocity.x;
     this.position.y += this.velocity.y;
-    if (collisions.betweenBallAndBrick(this, bricks)) {
+    const brickShouldBounce = collisions.betweenBallAndBrick(this, bricks);
+    if (brickShouldBounce === "x") {
+      this.velocity.x = -this.velocity.x;
+    }
+    if (brickShouldBounce === "y") {
       this.velocity.y = -this.velocity.y;
-      this.game.score += 1;
     }
   }
 };
