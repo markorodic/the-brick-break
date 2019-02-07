@@ -17,14 +17,13 @@ describe("the system", () => {
     }
   });
 
-  it("should produce reports", async () => {
+  it("should produce vanilla report", async () => {
     const page = await browser.newPage();
     console.log("test start");
 
     await page.exposeFunction("DO_THA_REPORT_PLEASE", async data => {
       console.log("got data", data.length);
       const dataSum = data.reduce((sum, datum, index) => {
-        console.log(datum);
         return sum + datum.delta;
       }, 0);
       const dataMean = dataSum / data.length;
@@ -36,7 +35,7 @@ describe("the system", () => {
     await deferred;
   });
 
-  it("should produce more reports", async () => {
+  it("should produce functional report", async () => {
     const page = await browser.newPage();
     console.log("test start");
 
@@ -55,7 +54,26 @@ describe("the system", () => {
     await deferred;
   });
 
-  it.skip("should produce more reports", async () => {
+  it("should produce es6 report", async () => {
+    const page = await browser.newPage();
+    console.log("test start");
+
+    await page.exposeFunction("DO_THA_REPORT_PLEASE", async data => {
+      console.log("got data for second test", data.length);
+      // testing continues here
+      const dataSum = data.reduce((sum, datum, index) => {
+        return sum + datum.delta;
+      }, 0);
+      const dataMean = dataSum / data.length;
+      console.log(dataMean);
+    });
+
+    const deferred = waitForClose(page);
+    await page.goto("http://localhost:8002");
+    await deferred;
+  });
+
+  it("should produce elm report", async () => {
     const page = await browser.newPage();
     console.log("test start");
 

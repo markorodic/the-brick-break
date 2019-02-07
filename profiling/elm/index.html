@@ -20,7 +20,8 @@
         const iterationCounter = new IterationCounter();
         var app = Elm.Main.embed(document.getElementsByClassName('elm-app')[0])
         app.ports.data.subscribe((data) => {
-            iterationCounter.endCalc();
+            console.log(data)
+            iterationCounter.calc(data);
         })
     </script>
 </html>

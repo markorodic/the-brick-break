@@ -20,7 +20,7 @@ export const drawToScreen = {
       var y = 29 * yMultiple + 61;
       var colour = whichColour(yMultiple);
 
-      bricks.push(new Brick(game, { x: x, y: y }, colour));
+      bricks.push(new Brick(game, { x, y }, colour));
     }
     return bricks;
   }

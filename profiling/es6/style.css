@@ -1,0 +1,23 @@
+body {
+    background: black;
+}
+.game-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+#game {
+    width: 500px;
+}
+
+.text-top-layer {
+    margin-top: 2rem;
+    width: 500px;
+    border-top: 1px solid #c7c7c7;
+    font-family: sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.15rem;
+}

@@ -19968,15 +19968,16 @@ var _user$project$Messages$KeyDown = function (a) {
 
 var _user$project$Model_Ball$initBall = {
 	position: _user$project$Constants$ballAttributes.startPosition,
-	velocity: {x: 1, y: 1}
+	velocity: {x: 1, y: 1},
+	time: _elm_lang$core$Maybe$Nothing
 };
 var _user$project$Model_Ball$BallValue = F2(
 	function (a, b) {
 		return {x: a, y: b};
 	});
-var _user$project$Model_Ball$Ball = F2(
-	function (a, b) {
-		return {position: a, velocity: b};
+var _user$project$Model_Ball$Ball = F3(
+	function (a, b, c) {
+		return {position: a, velocity: b, time: c};
 	});
 
 var _user$project$Model_Bricks$assignBrickPosition = F2(
@@ -20387,7 +20388,8 @@ var _user$project$Update$update = F2(
 					ctor: '_Tuple2',
 					_0: _user$project$Update$gameLoop(model),
 					_1: _user$project$Update$data(
-						_elm_lang$core$Json_Encode$float(_p0._0))
+						_elm_lang$core$Json_Encode$float(
+							_elm_lang$core$Time$inSeconds(_p0._0)))
 				};
 		}
 	});
@@ -20728,78 +20730,9 @@ var _user$project$View$view = function (model) {
 		}
 	};
 	return A2(
-		_mdgriffith$style_elements$Element$layout,
-		_user$project$View_StyleSheet$stylesheet,
-		_mdgriffith$style_elements$Element$screen(
-			A3(
-				_mdgriffith$style_elements$Element$el,
-				_user$project$View_StyleSheet$GameBackground,
-				{
-					ctor: '::',
-					_0: _mdgriffith$style_elements$Element_Attributes$center,
-					_1: {
-						ctor: '::',
-						_0: _mdgriffith$style_elements$Element_Attributes$verticalCenter,
-						_1: {
-							ctor: '::',
-							_0: _mdgriffith$style_elements$Element_Attributes$width(
-								_mdgriffith$style_elements$Element_Attributes$percent(100)),
-							_1: {ctor: '[]'}
-						}
-					}
-				},
-				A3(
-					_mdgriffith$style_elements$Element$column,
-					_user$project$View_StyleSheet$GameBackground,
-					{
-						ctor: '::',
-						_0: _mdgriffith$style_elements$Element_Attributes$spacing(15),
-						_1: {
-							ctor: '::',
-							_0: _mdgriffith$style_elements$Element_Attributes$center,
-							_1: {
-								ctor: '::',
-								_0: _mdgriffith$style_elements$Element_Attributes$height(
-									_mdgriffith$style_elements$Element_Attributes$percent(100)),
-								_1: {
-									ctor: '::',
-									_0: _mdgriffith$style_elements$Element_Attributes$width(
-										_mdgriffith$style_elements$Element_Attributes$percent(100)),
-									_1: {ctor: '[]'}
-								}
-							}
-						}
-					},
-					{
-						ctor: '::',
-						_0: A2(
-							_mdgriffith$style_elements$Element$within,
-							nodes,
-							A3(
-								_mdgriffith$style_elements$Element$column,
-								_user$project$View_StyleSheet$Game,
-								{
-									ctor: '::',
-									_0: _mdgriffith$style_elements$Element_Attributes$center,
-									_1: {
-										ctor: '::',
-										_0: _mdgriffith$style_elements$Element_Attributes$verticalCenter,
-										_1: {
-											ctor: '::',
-											_0: _mdgriffith$style_elements$Element_Attributes$width(
-												_mdgriffith$style_elements$Element_Attributes$px(500)),
-											_1: {
-												ctor: '::',
-												_0: _mdgriffith$style_elements$Element_Attributes$height(
-													_mdgriffith$style_elements$Element_Attributes$px(500)),
-												_1: {ctor: '[]'}
-											}
-										}
-									}
-								},
-								{ctor: '[]'})),
-						_1: {ctor: '[]'}
-					}))));
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{ctor: '[]'});
 };
 
 var _user$project$Main$main = _elm_lang$html$Html$program(
