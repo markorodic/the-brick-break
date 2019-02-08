@@ -2,7 +2,7 @@ import { drawToScreen } from "./Draw.js";
 import { Paddle } from "./Paddle.js";
 import { Ball } from "./Ball.js";
 import { collisions } from "./Collisions.js";
-import { colours } from "../../GameBoard/Colours.js";
+import { colours } from "../../board/Colours.js";
 
 export function Game(canvasId, mainGameEntity, themeColour, ballVelocity) {
   var canvas = document.getElementById(canvasId);

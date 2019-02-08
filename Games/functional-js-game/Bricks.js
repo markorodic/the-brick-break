@@ -1,5 +1,5 @@
 import { ballHitsABrick } from "./Collisions.js";
-import { whichColour } from "../../GameBoard/Colours.js";
+import { whichColour } from "../../board/Colours.js";
 
 export function initBricks() {
   const emptyBrickList = Array(196).fill({ x: 0, y: 0, colour: "" });

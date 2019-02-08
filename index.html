@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="GameBoard/GameBoard.css">
+        <link rel="stylesheet" type="text/css" href="board/board.css">
         <meta name="viewport" content="width=device-width, initial-scale=0.6">
     </head>
     <body>
@@ -8,19 +8,19 @@
             <div id="button-container">
                 <div class="loop-button-container">
                     <button id="loop-game-board-button" class="loop-button">
-                        <img src="images/loop-icon.svg"/>
+                        <img src="board/images/loop-icon.svg"/>
                     </button>
                     <label>RESET</label>
                 </div>
                 <div class="rotate-button-container">
                     <button id="rotate-game-board-button" class="switch-button">
-                        <img src="images/switch-icon.svg"/>
+                        <img src="board/images/switch-icon.svg"/>
                     </button>
                     <label>SWITCH</label>
                 </div>
                 <div class="play-button-container">
                     <button id="play-game-board-button" class="play-button">
-                        <img src="images/play-icon.svg"/>
+                        <img src="board/images/play-icon.svg"/>
                     </button>
                     <label>PLAY</label>
                 </div>
@@ -82,22 +82,22 @@
             //console.log(data);
         })
     </script> -->
-    <script type="module" src="GameBoard/State.js"></script>
-    <script type="module" src="GameBoard/GameBoard.js"></script>
-    <script type="module" src="GameBoard/EventListeners.js"></script>
-    <script type="module" src="GameBoard/Utilities/Utilities.js"></script>
-    <script type="module" src="GameBoard/GameMutations/GameMutations.js"></script>
-    <script type="module" src="GameBoard/GameMutations/IsolateGameBodies.js"></script>
-    <script type="module" src="GameBoard/GameMutations/RotateBoard.js"></script>
-    <script type="module" src="GameBoard/GameMutations/Text.js"></script>
+    <script type="module" src="board/state.js"></script>
+    <script type="module" src="board/board.js"></script>
+    <script type="module" src="board/eventListeners.js"></script>
+    <script type="module" src="board/utilities/utilities.js"></script>
+    <script type="module" src="board/animations/animations.js"></script>
+    <script type="module" src="board/animations/splitGame.js"></script>
+    <script type="module" src="board/animations/rotateBoard.js"></script>
+    <script type="module" src="board/animations/text.js"></script>
+    <script type="module" src="board/colours.js"></script>
 
     <!-- Vanilla JS Game -->
-    <script type="module" src="Games/vanilla-js-game/Draw.js"></script>
-    <script type="module" src="Games/vanilla-js-game/Ball.js"></script>
-    <script type="module" src="Games/vanilla-js-game/Bricks.js"></script>
-    <script type="module" src="Games/vanilla-js-game/Collisions.js"></script>
-    <script type="module" src="GameBoard/Colours.js"></script>
-    <script type="module" src="Games/vanilla-js-game/Game.js"></script>
+    <script type="module" src="Games/vanilla-js-game/draw.js"></script>
+    <script type="module" src="Games/vanilla-js-game/ball.js"></script>
+    <script type="module" src="Games/vanilla-js-game/bricks.js"></script>
+    <script type="module" src="Games/vanilla-js-game/collisions.js"></script>
+    <script type="module" src="Games/vanilla-js-game/game.js"></script>
 
     <!-- Functional JS Game -->
     <!-- <script type="module" src="Games/functional-js-game/"></script>

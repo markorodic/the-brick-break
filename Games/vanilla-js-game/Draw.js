@@ -1,4 +1,4 @@
-import { whichColour, colours } from "../../GameBoard/Colours.js";
+import { whichColour, colours } from "../../board/Colours.js";
 import { Brick } from "./Bricks.js";
 
 export const drawToScreen = {

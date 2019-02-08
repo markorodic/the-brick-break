@@ -2,8 +2,8 @@ import {
   gameRotateBoard,
   gameIsolateGameBodies,
   gamePlayGameSimulation
-} from "./GameMutations/GameMutations.js";
-import { DOMNode } from "./Utilities/Utilities.js";
+} from "./animations/animations.js";
+import { DOMNode } from "./utilities/utilities.js";
 import { Game } from "../Games/vanilla-js-game/Game.js";
 import { game } from "../Games/functional-js-game/Game.js";
 
