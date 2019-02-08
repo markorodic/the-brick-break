@@ -5,10 +5,11 @@ import { Game } from "../../Games/vanilla-js-game/Game.js";
 export function playGameSimulation() {
   hideText();
   // call new game with increase ball speed
-  new Game("game-one-bricks", "bricks", "blue", 1);
-  new Game("game-two-bricks", "bricks", "red", 1);
-  new Game("game-three-bricks", "bricks", "green", 1);
-  new Game("game-four-bricks", "bricks", "yellow", 1);
+  new Game("game-one-bricks", "bricks", "blue", 2.2);
+  new Game("game-two-bricks", "bricks", "red", 4.0);
+  new Game("game-three-bricks", "bricks", "green", 2.4);
+  new Game("game-four-bricks", "bricks", "yellow", 5);
+  document.getElementsByTagName("body")[0].classList.add("darken");
 
   let count = 0;
   function changeColour() {

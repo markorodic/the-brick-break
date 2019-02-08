@@ -15,12 +15,12 @@ class IterationCounter {
     console.log(this.frameCount);
     if (REPORT_TEST) {
       console.log(this.frames, delta);
-      if (this.frameCount < 600) {
+      if (this.frameCount < 100) {
         this.frameCount++;
         this.frameLog.push({
           delta
         });
-      } else if (this.frameCount === 600) {
+      } else if (this.frameCount === 100) {
         this.frameCount++;
         console.log(iteratorCounter, NUMBER_OF_ITERATORS);
         window.DO_THA_REPORT_PLEASE(this.frameLog, this.name);

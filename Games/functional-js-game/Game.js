@@ -21,7 +21,6 @@ function playGame(state, canvas, ctx) {
 }
 
 function gameLoop(state, canvas, ctx) {
-  framesPerSecondCounter.calcData("functional");
   const newState = [state, draw, update, collisionDetection].reduce(function(
     currentState,
     updateFunction

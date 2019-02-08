@@ -19,10 +19,9 @@ describe("the system", () => {
 
   it("should produce vanilla report", async () => {
     const page = await browser.newPage();
-    console.log("test start");
+    console.log("vanilla js test start");
 
     await page.exposeFunction("DO_THA_REPORT_PLEASE", async data => {
-      console.log("got data", data.length);
       const dataSum = data.reduce((sum, datum, index) => {
         return sum + datum.delta;
       }, 0);
@@ -37,10 +36,9 @@ describe("the system", () => {
 
   it("should produce functional report", async () => {
     const page = await browser.newPage();
-    console.log("test start");
+    console.log("functional js test start");
 
     await page.exposeFunction("DO_THA_REPORT_PLEASE", async data => {
-      console.log("got data for second test", data.length);
       // testing continues here
       const dataSum = data.reduce((sum, datum, index) => {
         return sum + datum.delta;
@@ -56,10 +54,9 @@ describe("the system", () => {
 
   it("should produce es6 report", async () => {
     const page = await browser.newPage();
-    console.log("test start");
+    console.log("es6 js test start");
 
     await page.exposeFunction("DO_THA_REPORT_PLEASE", async data => {
-      console.log("got data for second test", data.length);
       // testing continues here
       const dataSum = data.reduce((sum, datum, index) => {
         return sum + datum.delta;
@@ -75,10 +72,9 @@ describe("the system", () => {
 
   it("should produce elm report", async () => {
     const page = await browser.newPage();
-    console.log("test start");
+    console.log("elm test start");
 
     await page.exposeFunction("DO_THA_REPORT_PLEASE", async data => {
-      console.log("got data for second test", data.length);
       // testing continues here
       const dataSum = data.reduce((sum, datum, index) => {
         return sum + datum.delta;

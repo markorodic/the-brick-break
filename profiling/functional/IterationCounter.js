@@ -20,14 +20,14 @@ export class IterationCounter {
     const delta = this.endTime - this.startTime;
     this.frames.push(delta);
     if (REPORT_TEST) {
-      if (this.frameCount < 1500) {
+      if (this.frameCount < 300) {
         this.frameCount++;
         this.frameLog.push({
           startTime: this.startTime,
           endTime: this.endTime,
           delta
         });
-      } else if (this.frameCount === 1500) {
+      } else if (this.frameCount === 300) {
         this.frameCount++;
         console.log(iteratorCounter, NUMBER_OF_ITERATORS);
         window.DO_THA_REPORT_PLEASE(this.frameLog, this.name);

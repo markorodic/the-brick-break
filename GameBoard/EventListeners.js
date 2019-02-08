@@ -22,18 +22,18 @@ let elmGameThree;
 
 window.onload = function() {
   // Move this elsewhere
-  vanillaGameOne = new Game("game-one-bricks", "bricks", "blue", 0.5);
-  vanillaGameTwo = new Game("game-one-ball", "ball", "blue", 0.5);
-  vanillaGameThree = new Game("game-one-paddle", "paddle", "blue", 0.5);
-  functionalGameOne = new Game("game-two-bricks", "bricks", "red", 0.5);
-  functionalGameTwo = new Game("game-two-ball", "ball", "red", 0.5);
-  functionalGameThree = new Game("game-two-paddle", "paddle", "red", 0.5);
-  es6GameOne = new Game("game-three-bricks", "bricks", "green", 0.5);
-  es6GameTwo = new Game("game-three-ball", "ball", "green", 0.5);
-  es6GameThree = new Game("game-three-paddle", "paddle", "green", 0.5);
-  elmGameOne = new Game("game-four-bricks", "bricks", "yellow", 0.5);
-  elmGameTwo = new Game("game-four-ball", "ball", "yellow", 0.5);
-  elmGameThree = new Game("game-four-paddle", "paddle", "yellow", 0.5);
+  vanillaGameOne = new Game("game-one-bricks", "bricks", "blue", 1.1);
+  vanillaGameTwo = new Game("game-one-ball", "ball", "blue", 1.1);
+  vanillaGameThree = new Game("game-one-paddle", "paddle", "blue", 1.1);
+  functionalGameOne = new Game("game-two-bricks", "bricks", "red", 2.0);
+  functionalGameTwo = new Game("game-two-ball", "ball", "red", 2.0);
+  functionalGameThree = new Game("game-two-paddle", "paddle", "red", 2.0);
+  es6GameOne = new Game("game-three-bricks", "bricks", "green", 1.2);
+  es6GameTwo = new Game("game-three-ball", "ball", "green", 1.2);
+  es6GameThree = new Game("game-three-paddle", "paddle", "green", 1.2);
+  elmGameOne = new Game("game-four-bricks", "bricks", "yellow", 2.5);
+  elmGameTwo = new Game("game-four-ball", "ball", "yellow", 2.5);
+  elmGameThree = new Game("game-four-paddle", "paddle", "yellow", 2.5);
 };
 
 export function registerEventListeners() {

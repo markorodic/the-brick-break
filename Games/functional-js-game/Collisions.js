@@ -22,9 +22,14 @@ export function collisionDetection(state, canvas) {
     (newState.ballPosition = { x: 193, y: 282 }),
       (newState.ballVelocity = { x: 0, y: 0 });
   }
-  if (ballHitsBrick(ballPosition, bricks)) {
+  const axis = ballHitsBrick(ballPosition, bricks);
+  if (axis === "y") {
     filterBricks(newState);
     newState.ballVelocity.y = -ballVelocity.y;
+  }
+  if (axis === "x") {
+    filterBricks(newState);
+    newState.ballVelocity.x = -ballVelocity.x;
   }
   return newState;
 }
@@ -56,10 +61,11 @@ function ballHitsPaddle(ballPosition, paddlePositionX, canvas) {
 }
 
 export function ballHitsBrick(ballPosition, bricks) {
-  let hitBrick = bricks.filter(function(brick) {
-    return ballHitsABrick(ballPosition, brick);
-  });
-  return hitBrick[0];
+  for (var i = 0; i < bricks.length; i++) {
+    if (ballHitsABrick(ballPosition, bricks[i])) {
+      return ballHitsABrick(ballPosition, bricks[i]);
+    }
+  }
 }
 
 export function ballHitsABrick(ballPosition, brick) {
@@ -69,8 +75,19 @@ export function ballHitsABrick(ballPosition, brick) {
   const ballIsAboveBrickBottom = ballCenterY < brick.y + CONSTANTS.BRICK.SIZE.y;
   const ballIsbetweenBrickSides =
     ballCenterX > brick.x && ballCenterX < brick.x + CONSTANTS.BRICK.SIZE.x;
-
-  return (
-    ballIsbetweenBrickSides && ballIsBeneathBrickTop && ballIsAboveBrickBottom
-  );
+  if (
+    ballIsbetweenBrickSides &&
+    ballIsBeneathBrickTop &&
+    ballIsAboveBrickBottom
+  ) {
+    if (
+      ballCenterX > brick.x + 1 &&
+      ballCenterX < brick.x + CONSTANTS.BRICK.SIZE.x - 1
+    ) {
+      return "y";
+    } else {
+      return "x";
+    }
+  }
+  return false;
 }

@@ -1,7 +1,7 @@
 import { CONSTANTS } from "./Constants.js";
 
 export function draw(state, canvas, ctx) {
-  [drawBall, drawPaddle, drawBricks, drawStats].forEach(function(drawFunction) {
+  [drawBall, drawPaddle, drawBricks].forEach(function(drawFunction) {
     drawFunction({ state, ctx });
   });
   return state;

@@ -9,6 +9,12 @@ html {
     min-height: 100%;
     width: 100%;
     font-family: sans-serif;
+    background: white;
+ }
+
+ .darken {
+     background: black;
+     transition: 10s;
  }
 
 .root-container {
