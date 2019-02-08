@@ -4,8 +4,7 @@ import {
   gamePlayGameSimulation
 } from "./animations/animations.js";
 import { DOMNode } from "./utilities/utilities.js";
-import { Game } from "../Games/vanilla-js-game/Game.js";
-import { game } from "../Games/functional-js-game/Game.js";
+import { Game } from "../games/vanilla-js-game/game.js";
 
 let vanillaGameOne;
 let vanillaGameTwo;
