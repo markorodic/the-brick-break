@@ -1,10 +1,10 @@
-import { flashText } from "./Text.js";
+import { flashText } from "./text.js";
 import {
   addClass,
   removeClass,
   replaceClass,
   DOMNode
-} from "../Utilities/Utilities.js";
+} from "../utilities/utilities.js";
 
 export function rotateBoard() {
   let rotationClasses = {

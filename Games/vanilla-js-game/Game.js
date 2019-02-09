@@ -1,8 +1,8 @@
-import { drawToScreen } from "./Draw.js";
-import { Paddle } from "./Paddle.js";
-import { Ball } from "./Ball.js";
-import { collisions } from "./Collisions.js";
-import { colours } from "../../board/Colours.js";
+import { drawToScreen } from "./draw.js";
+import { Paddle } from "./paddle.js";
+import { Ball } from "./ball.js";
+import { collisions } from "./collisions.js";
+import { colours } from "../../board/colours.js";
 
 export function Game(canvasId, mainGameEntity, themeColour, ballVelocity) {
   var canvas = document.getElementById(canvasId);

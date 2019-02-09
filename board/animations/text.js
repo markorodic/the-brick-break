@@ -1,4 +1,4 @@
-import { addClass, removeClass, DOMNode } from "../Utilities/Utilities.js";
+import { addClass, removeClass, DOMNode } from "../utilities/utilities.js";
 
 export function flashText() {
   const buttonElement = DOMNode("button-container");

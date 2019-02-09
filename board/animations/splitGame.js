@@ -1,8 +1,7 @@
-import { State } from "../State.js";
-import { DOMNode } from "../Utilities/Utilities.js";
+import { State } from "../state.js";
+import { DOMNode } from "../utilities/utilities.js";
 
 export function isolateGameBodies() {
-  console.log("inside isolateGameBodies");
   const isSeparated = State.getState().separated;
   if (isSeparated) {
     const currentGame = State.getState().currentGame;

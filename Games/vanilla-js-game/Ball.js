@@ -1,4 +1,4 @@
-import { collisions } from "./Collisions.js";
+import { collisions } from "./collisions.js";
 
 export const Ball = function(game, velocity, mainEntity) {
   this.game = game;

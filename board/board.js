@@ -1,3 +1,3 @@
-import { registerEventListeners } from "./EventListeners.js";
+import { registerEventListeners } from "./eventListeners.js";
 
 registerEventListeners();

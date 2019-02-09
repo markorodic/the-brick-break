@@ -1,6 +1,6 @@
-import { DOMNode } from "../Utilities/Utilities.js";
-import { hideText } from "./Text.js";
-import { Game } from "../../Games/vanilla-js-game/Game.js";
+import { DOMNode } from "../utilities/utilities.js";
+import { hideText } from "./text.js";
+import { Game } from "../../games/vanilla-js-game/game.js";
 
 export function playGameSimulation() {
   hideText();

@@ -1,5 +1,5 @@
-import { whichColour, colours } from "../../board/Colours.js";
-import { Brick } from "./Bricks.js";
+import { whichColour, colours } from "../../board/colours.js";
+import { Brick } from "./bricks.js";
 
 export const drawToScreen = {
   drawRect: function(ctx, body, colour) {
