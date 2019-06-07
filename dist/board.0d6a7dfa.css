@@ -1,0 +1,289 @@
+html {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+ }
+ 
+ body {
+    margin: 0px;
+    min-height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+    background: white;
+    overflow-x: hidden;
+    overflow-y : hidden;
+ }
+
+ .darken {
+     background: black;
+     transition: 10s;
+ }
+
+.root-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y : hidden;
+}
+
+#button-container {
+    display: flex;
+    opacity: 1;
+    transition: opacity 0.8s ease-in;
+    max-width: 32rem;
+    width: 100%;
+    justify-content: space-around;
+    z-index: 100;
+}
+
+.loop-button, .switch-button, .play-button {
+    border: none;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    z-index: 100;
+}
+
+.loop-button-container, .rotate-button-container, .play-button-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.rotate-button-container button {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.switch-button img {
+    width: 8rem;
+}
+
+#button-container label {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    letter-spacing: 0.4rem;
+    text-align: center; 
+}
+
+#game-board {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.root-container .increase-spin {
+    animation-duration: 40ms;
+    transition: 30s;
+}
+
+.first-game {
+    transform: rotate(0deg);
+    transition: transform 2s;
+}
+
+.second-game {
+    transform: rotate(90deg); 
+    transition: transform 2s;
+}
+
+.third-game {
+    transform: rotate(180deg);
+    transition: transform 2s;
+}
+
+.fourth-game {
+    transform: rotate(270deg);
+    transition: transform 2s;
+}
+
+#information-container {
+    position: relative;
+    max-width: 26rem;
+    height: 1rem;
+    width: 100%;
+    opacity: 1;
+    transition: opacity 0.8s ease-in;
+}
+
+.text-container {
+    width: 100%;
+    position: absolute;
+    display: none;
+}
+
+.text-top-layer {
+    border-bottom: 1px solid #c7c7c7;
+}
+
+.text-container h2 {
+    font-size: 0.8rem;
+    letter-spacing: 0.15rem;
+    display: inline-block;
+}
+
+.subtext-container p {
+    display: inline-block;
+    font-size: 0.8rem;
+    letter-spacing: 0.15rem;
+}
+
+#button-container.flash, #information-container.flash {
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+canvas {
+	min-width: 392px;
+	background: none;
+}
+
+.div {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#game-one, #game-two, #game-three, #game-four {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    transition: 0.5s;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+
+#game-one-canvas {
+    position: absolute;
+    transition: left 3s;
+}
+
+#game-two-canvas {
+    position: absolute;
+    transition: left 3s;
+}
+
+#game-three-canvas {
+    position: absolute;
+    transition: left 3s;
+}
+
+#game-four-canvas {
+    position: absolute;
+    transition: left 3s;
+}
+
+#game-board .hide {
+    opacity: 0;
+}
+
+
+#game-one-bricks.separate {
+    left: 0;
+    transition: left 2s;
+}
+
+#game-one-ball.separate {
+    left: 500px;
+    transition: left 2s;
+}
+
+#game-one-paddle.separate {
+    left: 1000px;
+    transition: left 2s;
+}
+
+#game-one {
+	position: absolute;
+    transform: rotate(0deg);
+    z-index: 4;
+    mix-blend-mode: normal;
+    opacity: 0.75;
+}
+
+#game-two {
+	position: absolute;
+    transform: rotate(270deg);
+    z-index: 3;
+    mix-blend-mode: normal;
+    opacity: 0.75;
+}
+
+#game-three {
+	position: absolute;
+    transform: rotate(180deg);
+    z-index: 2;
+    mix-blend-mode: normal;
+    opacity: 0.75;
+}
+
+#game-four {
+	position: absolute;
+    transform: rotate(90deg);
+    z-index: 1;
+    mix-blend-mode: normal;
+    opacity: 0.75;
+}
+
+#game-board .top-game {
+    z-index: 5;
+    opacity: 1;
+    transition: 2s;
+}
+
+.show-text {
+    display: inherit;
+}
+
+.text-top-layer {
+    display: flex;
+    justify-content: space-between;
+}
+
+#separate-view-button {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    font-size: 0.7rem;
+    color: black;
+    font-weight: 100;
+    letter-spacing: 0.1rem;
+}
+
+
+
+@media (max-width: 800px) { 
+    .root-container {
+        height: 90vh;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 600px) { 
+    .switch-button img {
+        width: 6rem;
+    }
+    .root-container {
+        height: 100vh;
+        justify-content: space-around;
+    }
+}
+
+/*# sourceMappingURL=/board.0d6a7dfa.css.map */
