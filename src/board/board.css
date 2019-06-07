@@ -215,6 +215,15 @@ canvas {
     opacity: 0.75;
 }
 
+iframe {
+    border: none;
+    transform: rotate(90deg);
+}
+
+.hide {
+    display: none;
+}
+
 #game-board .top-game {
     z-index: 5;
     opacity: 1;

@@ -19943,14 +19943,14 @@ var _user$project$Constants$brickLayout = {numberOfBricks: 196, xMargin: 47, yMa
 var _user$project$Constants$brickAttributes = {width: 29, height: 29};
 var _user$project$Constants$paddleAttributes = {
 	width: 60,
-	height: 5,
+	height: 6,
 	yPosition: 495,
 	startPosition: 0,
 	velocity: {left: -5, right: 5}
 };
 var _user$project$Constants$ballAttributes = {
-	width: 5,
-	height: 5,
+	width: 6,
+	height: 6,
 	startVelocity: {x: 2, y: 2},
 	startPosition: {x: 250, y: 475}
 };
@@ -20238,7 +20238,7 @@ var _user$project$Update_Ball$handleYCollisions = F3(
 		var _p0 = ball;
 		var position = _p0.position;
 		var velocity = _p0.velocity;
-		return (A2(_user$project$Update_Collisions$doesBallHitPaddle, position, paddlePosition) || A2(_user$project$Update_Collisions$doesBallHitBrick, bricks, ball)) ? (velocity.y * -1) : (_user$project$Update_Collisions$doesBallHitCeiling(position) ? 2 : velocity.y);
+		return (A2(_user$project$Update_Collisions$doesBallHitPaddle, position, paddlePosition) || A2(_user$project$Update_Collisions$doesBallHitBrick, bricks, ball)) ? (velocity.y * -1) : (_user$project$Update_Collisions$doesBallHitCeiling(position) ? 1 : velocity.y);
 	});
 var _user$project$Update_Ball$handleXCollisions = function (ball) {
 	var _p1 = ball;
@@ -20397,21 +20397,21 @@ var _user$project$View_StyleSheet$colours = {
 	black: A3(_elm_lang$core$Color$rgb, 0, 0, 0),
 	offBlack: A3(_elm_lang$core$Color$rgb, 20, 20, 20),
 	grey: A3(_elm_lang$core$Color$rgb, 142, 142, 142),
-	main: A3(_elm_lang$core$Color$rgb, 182, 206, 0),
-	rowOne: A3(_elm_lang$core$Color$rgb, 220, 249, 0),
-	rowTwo: A3(_elm_lang$core$Color$rgb, 220, 253, 1),
-	rowThree: A3(_elm_lang$core$Color$rgb, 220, 255, 0),
-	rowFour: A3(_elm_lang$core$Color$rgb, 226, 255, 12),
-	rowFive: A3(_elm_lang$core$Color$rgb, 227, 255, 76),
-	rowSix: A3(_elm_lang$core$Color$rgb, 230, 255, 43),
-	rowSeven: A3(_elm_lang$core$Color$rgb, 232, 255, 63),
-	rowEight: A3(_elm_lang$core$Color$rgb, 234, 255, 81),
-	rowNine: A3(_elm_lang$core$Color$rgb, 236, 255, 99),
-	rowTen: A3(_elm_lang$core$Color$rgb, 238, 255, 113),
-	rowEleven: A3(_elm_lang$core$Color$rgb, 240, 255, 132),
-	rowTweleve: A3(_elm_lang$core$Color$rgb, 242, 255, 147),
-	rowThirteen: A3(_elm_lang$core$Color$rgb, 244, 255, 165),
-	rowFourteen: A3(_elm_lang$core$Color$rgb, 246, 255, 183)
+	main: A4(_elm_lang$core$Color$rgba, 197, 237, 0, 1),
+	rowOne: A4(_elm_lang$core$Color$rgba, 220, 249, 0, 0.5),
+	rowTwo: A4(_elm_lang$core$Color$rgba, 220, 253, 1, 0.5),
+	rowThree: A4(_elm_lang$core$Color$rgba, 220, 255, 0, 0.5),
+	rowFour: A4(_elm_lang$core$Color$rgba, 226, 255, 12, 0.5),
+	rowFive: A4(_elm_lang$core$Color$rgba, 227, 255, 76, 0.5),
+	rowSix: A4(_elm_lang$core$Color$rgba, 230, 255, 43, 0.5),
+	rowSeven: A4(_elm_lang$core$Color$rgba, 232, 255, 63, 0.5),
+	rowEight: A4(_elm_lang$core$Color$rgba, 234, 255, 81, 0.5),
+	rowNine: A4(_elm_lang$core$Color$rgba, 236, 255, 99, 0.5),
+	rowTen: A4(_elm_lang$core$Color$rgba, 238, 255, 113, 0.5),
+	rowEleven: A4(_elm_lang$core$Color$rgba, 240, 255, 132, 0.5),
+	rowTweleve: A4(_elm_lang$core$Color$rgba, 242, 255, 147, 0.5),
+	rowThirteen: A4(_elm_lang$core$Color$rgba, 244, 255, 165, 0.5),
+	rowFourteen: A4(_elm_lang$core$Color$rgba, 246, 255, 183, 0.5)
 };
 var _user$project$View_StyleSheet$GameOver = {ctor: 'GameOver'};
 var _user$project$View_StyleSheet$Bricks = function (a) {

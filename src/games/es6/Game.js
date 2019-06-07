@@ -5,6 +5,7 @@ import { CollisionDetection } from "./Collisions.js";
 import { whichColour } from "../../board/colours.js";
 
 export class Game {
+  debugger;
   constructor(canvasId) {
     this.canvas = document.getElementById(canvasId);
     this.ctx = this.canvas.getContext("2d");
