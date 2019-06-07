@@ -32,7 +32,6 @@ window.onload = function() {
   );
   es6GameOne = new ClassesGame("game-three-canvas", "bricks", "green", 1.2);
   es6GameOne.playGame();
-  // elmGameOne = new Game("game-four-canvas", "bricks", "yellow", 2.5);
 };
 
 export function registerEventListeners() {

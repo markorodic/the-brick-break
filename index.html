@@ -23,12 +23,9 @@
                 <div id="game-three">
                     <canvas id='game-three-canvas' class="" width="500" height="500"></canvas>
                 </div>
-                <!-- <div id="game-four">
-                    <canvas id='game-four-canvas' class="" width="500" height="500"></canvas>
-                </div> -->
-                <!-- <div id="game-four"> -->
-                    <!-- <div class="elm-app"></div> -->
-                <!-- </div> -->
+                <div id="game-four">
+                    <div class="elm-app"></div>
+                </div>
             </div>
             <div id="information-container">
                 <div class="text-container text-one show-text">
@@ -54,13 +51,13 @@
             </div>
         </div>
     </body>
-    <!-- <script type="text/javascript" src="games/elm.js"></script> -->
-   <!-- <script>
+    <script type="text/javascript" src="src/games/elm.js"></script>
+   <script>
         var app = Elm.Main.embed(document.getElementsByClassName('elm-app')[0])
-        app.ports.data.subscribe((data) => {
+        // app.ports.data.subscribe((data) => {
             //console.log(data);
-        })
-    </script> -->
+        // })
+    </script>
     <script type="module" src="src/board/state.js"></script>
     <script type="module" src="src/board/board.js"></script>
     <script type="module" src="src/board/eventListeners.js"></script>
