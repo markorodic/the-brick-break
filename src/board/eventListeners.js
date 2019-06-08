@@ -1,12 +1,6 @@
-import {
-  gameRotateBoard,
-  gameIsolateGameBodies,
-  gamePlayGameSimulation
-} from "./animations/animations.js";
+import { gameRotateBoard } from "./animations/animations.js";
 import { DOMNode } from "./utilities/utilities.js";
 import { Game as VanillaGame } from "../games/vanilla-js-game/game.js";
-import { game as FunctionalGame } from "../games/functional-js-game/Game.js";
-import { Game as ClassesGame } from "../games/es6/Game.js";
 
 let vanillaGameOne;
 let vanillaGameTwo;
