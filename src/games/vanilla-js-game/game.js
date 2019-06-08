@@ -4,20 +4,15 @@ import { Ball } from "./ball.js";
 import { collisions } from "./collisions.js";
 import { colours } from "../../board/colours.js";
 
-export function Game(canvasId, mainGameEntity, themeColour, ballVelocity) {
+export function Game(canvasId, themeColour, ballVelocity) {
   var canvas = document.getElementById(canvasId);
   var ctx = canvas.getContext("2d");
   this.gameSize = { x: canvas.width, y: canvas.height };
   this.themeColour = themeColour;
-  this.mainGameEntity = mainGameEntity;
   this.bodies = {
-    bricks: drawToScreen.drawBricks(
-      this,
-      this.themeColour,
-      this.mainGameEntity
-    ),
-    paddle: new Paddle(this.gameSize, mainGameEntity),
-    ball: new Ball(this, ballVelocity, mainGameEntity)
+    bricks: drawToScreen.drawBricks(this, this.themeColour),
+    paddle: new Paddle(this.gameSize),
+    ball: new Ball(this, ballVelocity)
   };
   this.score = 0;
   this.lives = 3;

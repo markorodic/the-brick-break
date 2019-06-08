@@ -1,4 +1,4 @@
-export const Paddle = function(gameSize, mainEntity) {
+export const Paddle = function(gameSize) {
   (this.size = {
     x: 60,
     y: 7

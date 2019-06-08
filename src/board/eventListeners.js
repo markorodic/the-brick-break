@@ -23,10 +23,10 @@ let elmGameThree;
 
 window.onload = function() {
   // Move this elsewhere
-  vanillaGameOne = new VanillaGame("game-one-canvas", "bricks", "blue", 1.1);
-  vanillaGameOne = new VanillaGame("game-two-canvas", "bricks", "red", 2);
-  vanillaGameOne = new VanillaGame("game-three-canvas", "bricks", "green", 1.2);
-  vanillaGameOne = new VanillaGame("game-four-canvas", "bricks", "yellow", 1);
+  vanillaGameOne = new VanillaGame("game-one-canvas", "blue", 1.1);
+  vanillaGameOne = new VanillaGame("game-two-canvas", "red", 3);
+  vanillaGameOne = new VanillaGame("game-three-canvas", "green", 1);
+  vanillaGameOne = new VanillaGame("game-four-canvas", "yellow", 7.4);
   // functionalGameOne = new FunctionalGame(
   //   "game-two-canvas",
   //   "bricks",
