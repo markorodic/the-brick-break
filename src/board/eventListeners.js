@@ -35,6 +35,8 @@ export function registerEventListeners() {
   // Move domnode inside addeventlister
   const rotateGameBoardButton = DOMNode("rotate-game-board-button");
   addEventListenerOnClick(rotateGameBoardButton, gameRotateBoard);
+  const gameBoardButton = DOMNode("game-board");
+  addEventListenerOnClick(gameBoardButton, gameRotateBoard);
 }
 
 function pauseCurrentGames() {

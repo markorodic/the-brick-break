@@ -12,6 +12,24 @@ html {
     background: white;
  }
 
+ button {
+    /* display: inline-block; */
+    border: none;
+    margin: 0;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+ }
+
+ button:focus {
+     outline: none;
+ }
+
+ button:active {
+    outline: none;
+}
+
  .darken {
      background: black;
      transition: 10s;
@@ -159,7 +177,6 @@ canvas {
 
 
 #game-one-canvas, #game-one-canvas, #game-one-canvas {
-    position: absolute;
     transition: left 3s;
 }
 
