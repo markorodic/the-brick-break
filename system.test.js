@@ -21,8 +21,7 @@ describe("the system", () => {
     const page = await browser.newPage();
     console.log("vanilla js test start");
 
-    await page.exposeFunction("DO_THA_REPORT_PLEASE", async data => {
-      // testing continues here
+    await page.exposeFunction("DO_REPORT", async data => {
       const dataSum = data.reduce((sum, datum, index) => {
         return sum + datum.delta;
       }, 0);
@@ -39,7 +38,7 @@ describe("the system", () => {
     const page = await browser.newPage();
     console.log("functional js test start");
 
-    await page.exposeFunction("DO_THA_REPORT_PLEASE", async data => {
+    await page.exposeFunction("DO_REPORT", async data => {
       // testing continues here
       const dataSum = data.reduce((sum, datum, index) => {
         return sum + datum.delta;
@@ -57,7 +56,7 @@ describe("the system", () => {
     const page = await browser.newPage();
     console.log("es6 js test start");
 
-    await page.exposeFunction("DO_THA_REPORT_PLEASE", async data => {
+    await page.exposeFunction("DO_REPORT", async data => {
       // testing continues here
       const dataSum = data.reduce((sum, datum, index) => {
         return sum + datum.delta;
@@ -75,7 +74,7 @@ describe("the system", () => {
     const page = await browser.newPage();
     console.log("elm test start");
 
-    await page.exposeFunction("DO_THA_REPORT_PLEASE", async data => {
+    await page.exposeFunction("DO_REPORT", async data => {
       // testing continues here
       const dataSum = data.reduce((sum, datum, index) => {
         return sum + datum.delta;

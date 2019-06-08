@@ -29,7 +29,7 @@ export class IterationCounter {
         });
       } else if (this.frameCount === 1500) {
         this.frameCount++;
-        window.DO_THA_REPORT_PLEASE(this.frameLog, this.name);
+        window.DO_REPORT(this.frameLog, this.name);
         // if (++iteratorCounter >= NUMBER_OF_ITERATORS) {
         window.PLEASE_CLOSE_ME();
         // }
