@@ -25,14 +25,14 @@ export class Game {
   }
   drawRect(player, ball) {
     this.ctx.clearRect(0, 0, this.gameSize.x, this.gameSize.y);
-    this.ctx.fillStyle = "#C6494B";
+    this.ctx.fillStyle = "#00b771";
     this.ctx.fillRect(
       player.center.x - player.size.x / 2,
       player.center.y - player.size.y / 2,
       player.size.x,
       player.size.y
     );
-    this.ctx.fillStyle = "#C6494B";
+    this.ctx.fillStyle = "#00b771";
     this.ctx.fillRect(
       ball.center.x - ball.size.x / 2,
       ball.center.y - ball.size.y / 2,
@@ -51,11 +51,7 @@ export class Game {
       );
     }
   }
-  drawText(ctx, variable, left, top) {
-    this.ctx.fillStyle = "#D3D7D0";
-    ctx.fillText(variable, left, top);
-    ctx.font = '40px "Press Start 2P"';
-  }
+  drawText(ctx, variable, left, top) {}
   drawBricks() {
     var bricks = [];
     for (var i = 0; i < 196; i++) {

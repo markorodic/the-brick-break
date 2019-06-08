@@ -3,3 +3,4 @@ node_modules
 *.swp
 elm-stuff
 project-notes.vim
+.cache

@@ -7,7 +7,9 @@ export class Player {
     this.gameSize = gameSize;
   }
   update(ball) {
-    this.center.x = ball.center.x;
+    if (ball.center.x > 30 && ball.center.x < 470) {
+      this.center.x = ball.center.x;
+    }
   }
   printSide() {
     this.input.keyboardPress(this.input.key.left);

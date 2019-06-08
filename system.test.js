@@ -22,6 +22,7 @@ describe("the system", () => {
     console.log("vanilla js test start");
 
     await page.exposeFunction("DO_THA_REPORT_PLEASE", async data => {
+      // testing continues here
       const dataSum = data.reduce((sum, datum, index) => {
         return sum + datum.delta;
       }, 0);

@@ -29,7 +29,12 @@ export class Ball {
 
     let self = this;
     collisions.bricks.forEach(function(brick) {
-      if (collisions.brickHit(brick)) {
+      if (collisions.brickHit(brick) === "x") {
+        console.log("x");
+        self.velocity.x = -self.velocity.x;
+      }
+      if (collisions.brickHit(brick) === "y") {
+        console.log("y");
         self.velocity.y = -self.velocity.y;
       }
     });

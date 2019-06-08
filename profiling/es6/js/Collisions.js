@@ -28,12 +28,21 @@ export class CollisionDetection {
   brickHit(brick) {
     var startX = brick.center.x - brick.size.x / 2;
     var startY = brick.center.y - brick.size.y / 2;
-    return (
+    if (
       this.ball.center.x > startX &&
       this.ball.center.x < startX + brick.size.x &&
       this.ball.center.y > startY &&
       this.ball.center.y < startY + brick.size.y
-    );
+    ) {
+      if (
+        this.ball.center.x > startX + 1 &&
+        this.ball.center.x < startX + brick.size.x - 1
+      ) {
+        return "y";
+      } else {
+        return "x";
+      }
+    }
   }
   brickCollision() {
     this.bricks.forEach(function(brick) {});

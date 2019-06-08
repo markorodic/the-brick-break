@@ -217,7 +217,6 @@ canvas {
 
 iframe {
     border: none;
-    transform: rotate(90deg);
 }
 
 .hide {

@@ -24,14 +24,17 @@ let elmGameThree;
 window.onload = function() {
   // Move this elsewhere
   vanillaGameOne = new VanillaGame("game-one-canvas", "bricks", "blue", 1.1);
-  functionalGameOne = new FunctionalGame(
-    "game-two-canvas",
-    "bricks",
-    "red",
-    2.0
-  );
-  es6GameOne = new ClassesGame("game-three-canvas", "bricks", "green", 1.2);
-  es6GameOne.playGame();
+  vanillaGameOne = new VanillaGame("game-two-canvas", "bricks", "red", 2);
+  vanillaGameOne = new VanillaGame("game-three-canvas", "bricks", "green", 1.2);
+  vanillaGameOne = new VanillaGame("game-four-canvas", "bricks", "yellow", 1);
+  // functionalGameOne = new FunctionalGame(
+  //   "game-two-canvas",
+  //   "bricks",
+  //   "red",
+  //   2.0
+  // );
+  // es6GameOne = new ClassesGame("game-three-canvas", "bricks", "green", 1.2);
+  // es6GameOne.playGame();
 };
 
 export function registerEventListeners() {

@@ -14,10 +14,21 @@ body {
 }
 
 .text-top-layer {
+    color: #d6d6d6;
     margin-top: 2rem;
     width: 500px;
-    border-top: 1px solid #c7c7c7;
     font-family: sans-serif;
     font-size: 0.6rem;
     letter-spacing: 0.15rem;
+    position: relative;
+    max-width: 35rem;
+    width: 100%;
+    opacity: 1;
+    border-bottom: 1px solid rgb(47, 47, 47);
+}
+
+h2 {
+    font-size: 0.8rem;
+    letter-spacing: 0.15rem;
+    display: inline-block;
 }
