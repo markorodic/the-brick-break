@@ -217,9 +217,40 @@ canvas {
 
 a {
     color: initial;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 
-.text-one h2 {
+.text-one-icon {
+    height: 0.7rem;
+    width: 0.7rem;
+    background: #4557bf;
+    margin-left: 0.4rem;;
+}
+
+.text-two-icon {
+    height: 0.7rem;
+    width: 0.7rem;
+    background: #c14c98;
+    margin-left: 0.4rem;;
+}
+
+.text-three-icon {
+    height: 0.7rem;
+    width: 0.7rem;
+    background: #0aa76b;
+    margin-left: 0.4rem;;
+}
+
+.text-four-icon {
+    height: 0.7rem;
+    width: 0.7rem;
+    background: #d0bb0b;
+    margin-left: 0.4rem;;
+}
+
+/* .text-one h2 {
     color: #4557bf;
 }
 
@@ -233,7 +264,7 @@ a {
 
 .text-four h2 {
     color: #d0bb0b;
-}
+} */
 
 iframe {
     border: none;
