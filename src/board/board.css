@@ -104,14 +104,14 @@ html {
 
 #information-container {
     position: relative;
-    max-width: 35rem;
+    max-width: 410px;
     width: 100%;
     opacity: 1;
     transition: opacity 0.8s ease-in;
 }
 
 .text-container {
-    width: 35rem;
+    width: 100%;
     position: absolute;
     display: none;
 }
@@ -309,4 +309,51 @@ iframe {
 .vanillaData {
     display: flex;
     flex-direction: column;
+}
+
+@media (max-width: 800px) { 
+    #button-container {
+        height: 20rem;
+        align-items: center;
+        justify-content: center;
+    }
+    .text-container h2 {
+        font-size: 1.2rem;
+        letter-spacing: 0.2rem;
+        font-weight: 600;
+        display: inline-block;
+    }
+    .text-container a div {
+        height: 1rem;
+        width: 1.01rem;
+        margin-left: 0.7rem;
+    }
+    #button-container label {
+        font-size: 1.25rem;
+    }
+    .switch-button img {
+        width: 7rem;
+    }
+    .root-container {
+        height: 80vh;
+        justify-content: space-around;
+    }
+    #game-board {
+        margin-top: -5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    #button-container {
+        height: 10rem;
+        align-items: center;
+        justify-content: center;
+    }
+    .switch-button img {
+        width: 6rem;
+    } 
+    .root-container {
+        height: 98vh;
+        justify-content: space-around;
+    }
 }
