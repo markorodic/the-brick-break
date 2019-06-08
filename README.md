@@ -4,7 +4,7 @@ The Brick Break
 
 A visualisation of the same game built using four different paradigms. The execution time of the update function in each game is profiled and the speed of the balls are mapped to their respective performance values.
 
-![snapshot](screenshits/game.png)
+![snapshot](screenshots/game.png)
 
 ## Getting Started
 
@@ -38,7 +38,7 @@ To run the tests:
 npm test
 ```
 
-![snapshot](screenshits/tests.png)
+![snapshot](screenshots/tests.png)
 
 ## License
 
