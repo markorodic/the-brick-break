@@ -117,7 +117,7 @@ html {
 }
 
 .text-top-layer {
-    border-bottom: 1px solid #c7c7c7;
+    border-bottom: 1px solid #e6e6e6;
 }
 
 .text-container h2 {
@@ -213,6 +213,26 @@ canvas {
     z-index: 1;
     mix-blend-mode: normal;
     opacity: 0.75;
+}
+
+a {
+    color: initial;
+}
+
+.text-one h2 {
+    color: #4557bf;
+}
+
+.text-two h2 {
+    color: #c14c98;
+}
+
+.text-three h2 {
+    color: #0aa76b;
+}
+
+.text-four h2 {
+    color: #d0bb0b;
 }
 
 iframe {
