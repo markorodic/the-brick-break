@@ -2,7 +2,7 @@ import { collisions } from "./collisions.js";
 
 export const Ball = function(game, velocity) {
   this.game = game;
-  this.size = { x: 6, y: 6 };
+  this.size = { x: 7, y: 7 };
   this.position = { x: 250, y: 475 };
   this.velocity = { x: velocity, y: velocity };
   this.radius = this.size.x / 2;

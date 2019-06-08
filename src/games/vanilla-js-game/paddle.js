@@ -1,7 +1,7 @@
 export const Paddle = function(gameSize) {
   (this.size = {
     x: 60,
-    y: 7
+    y: 8
   }),
     (this.position = {
       x: gameSize.x / 2,
