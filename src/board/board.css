@@ -78,7 +78,13 @@ html {
     font-size: 0.8rem;
     font-weight: 100;
     letter-spacing: 0.05rem;
+    text-decoration: underline;
+    color: #a2a2a2;
+}
+
+#description-text b {
     color: #4c4c4c;
+    font-weight: 300;
 }
 
 .loop-button, .switch-button, .play-button {
