@@ -34,7 +34,7 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Running the tests
 
-First run each game on a separate server (8000, 8001, 8002, 8003) and then run:
+First run each game on a separate server (using ports: 8000, 8001, 8002, 8003) and then run:
 
 ```
 npm test
