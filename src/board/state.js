@@ -1,5 +1,4 @@
 const initialState = {
-  separated: false,
   currentGame: 1
 };
 

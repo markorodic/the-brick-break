@@ -50,7 +50,7 @@ html {
 #description-text {
     max-width: 26rem;
     width: 100%;
-    border-top: 1px solid #c1c1c1;
+    border-top: 1px solid #e6e6e6;
     text-align: left;
     opacity: 1;
     transition: opacity 0.8s ease-in;
