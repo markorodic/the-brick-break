@@ -10,6 +10,9 @@ html {
     width: 100%;
     font-family: sans-serif;
     background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
  }
 
  button {
@@ -20,6 +23,8 @@ html {
     cursor: pointer;
     text-align: center;
     -webkit-tap-highlight-color: transparent;
+    background-color:transperant;
+    outline:none;
  }
 
  button:focus {
@@ -39,19 +44,41 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
+    justify-content: space-between;
 }
 
-#button-container {
-    display: flex;
-    opacity: 1;
-    transition: opacity 0.8s ease-in;
-    margin-top: -3rem;
+#description-text {
     max-width: 26rem;
     width: 100%;
-    justify-content: space-around;
+    border-top: 1px solid #c1c1c1;
+    text-align: left;
+    opacity: 1;
+    transition: opacity 0.8s ease-in;
     z-index: 100;
+}
+
+#description-text button {
+    margin: 0.6rem 0;
+    font-size: 0.8rem;
+    font-weight: 100;
+    letter-spacing: 0.05rem;
+    padding: 0;
+}
+
+#description-text p {
+    margin: 0.6rem 0;
+    font-size: 0.8rem;
+    font-weight: 100;
+    letter-spacing: 0.05rem;
+    color: #a2a2a2;
+}
+
+#description-text a {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 100;
+    letter-spacing: 0.05rem;
+    color: #4c4c4c;
 }
 
 .loop-button, .switch-button, .play-button {
@@ -67,7 +94,7 @@ html {
     z-index: 100;
 }
 
-.loop-button-container, .rotate-button-container, .play-button-container {
+.loop-description-text, .rotate-description-text, .play-description-text {
     display: flex;
     flex-direction: column;
 }
@@ -80,7 +107,7 @@ html {
     width: 4rem;
 }
 
-#button-container label {
+#description-text label {
     font-size: 0.8rem;
     margin-bottom: 2rem;
     letter-spacing: 0.3rem;
@@ -90,9 +117,9 @@ html {
 #game-board {
     height: 500px;
     width: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 2rem 0;
+    background: none;
+    position: relative;
 }
 
 .root-container .increase-spin {
@@ -126,6 +153,7 @@ html {
     width: 100%;
     opacity: 1;
     transition: opacity 0.8s ease-in;
+    height: 2.4rem;
 }
 
 .text-container {
@@ -150,7 +178,7 @@ html {
     letter-spacing: 0.15rem;
 }
 
-#button-container.flash, #information-container.flash {
+#description-text.flash, #information-container.flash {
     opacity: 0;
     transition: opacity 0.2s;
 }
@@ -168,13 +196,14 @@ canvas {
 }
 
 #game-one, #game-two, #game-three, #game-four {
-    position: relative;
+    position: absolute;
     height: 100%;
     width: 100%;
     opacity: 1;
     transition: 0.5s;
+    top: 0;
+    left: 0;
 }
-
 
 #game-one-canvas, #game-one-canvas, #game-one-canvas {
     transition: left 3s;
@@ -201,7 +230,6 @@ canvas {
 }
 
 #game-one {
-	position: absolute;
     transform: rotate(0deg);
     z-index: 4;
     mix-blend-mode: normal;
@@ -209,7 +237,6 @@ canvas {
 }
 
 #game-two {
-	position: absolute;
     transform: rotate(270deg);
     z-index: 3;
     mix-blend-mode: normal;
@@ -217,7 +244,6 @@ canvas {
 }
 
 #game-three {
-	position: absolute;
     transform: rotate(180deg);
     z-index: 2;
     mix-blend-mode: normal;
@@ -225,7 +251,6 @@ canvas {
 }
 
 #game-four {
-	position: absolute;
     transform: rotate(90deg);
     z-index: 1;
     mix-blend-mode: normal;
@@ -329,39 +354,25 @@ iframe {
 }
 
 @media (max-width: 800px) { 
-    #button-container {
-        height: 20rem;
-        align-items: center;
-        justify-content: center;
-    }
     .text-container h2 {
         font-size: 1.2rem;
         letter-spacing: 0.2rem;
         font-weight: 600;
         display: inline-block;
     }
-    .text-container a div {
-        height: 1rem;
-        width: 1.01rem;
-        margin-left: 0.7rem;
+    #description-text p {
+        font-size: 1.3rem;
     }
-    #button-container label {
-        font-size: 1.25rem;
+    #description-text a {
+        font-size: 1.3rem;
     }
-    .switch-button img {
-        width: 7rem;
-    }
-    .root-container {
-        height: 80vh;
-        justify-content: space-around;
-    }
-    #game-board {
-        margin-top: -5rem;
+    #information-container {
+        margin: 0.6rem 0;
     }
 }
 
 @media (max-width: 600px) {
-    #button-container {
+    /* #description-text {
         height: 10rem;
         align-items: center;
         justify-content: center;
@@ -372,5 +383,5 @@ iframe {
     .root-container {
         height: 98vh;
         justify-content: space-around;
-    }
+    } */
 }

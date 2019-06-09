@@ -1,7 +1,7 @@
 import { addClass, removeClass, DOMNode } from "../utilities/utilities.js";
 
 export function flashText() {
-  const buttonElement = DOMNode("button-container");
+  const buttonElement = DOMNode("description-text");
   const subtextElement = DOMNode("information-container");
   addFlashClass(buttonElement, subtextElement);
 
@@ -11,7 +11,7 @@ export function flashText() {
 }
 
 export function hideText() {
-  const buttonElement = DOMNode("button-container");
+  const buttonElement = DOMNode("description-text");
   const subtextElement = DOMNode("information-container");
   addFlashClass(buttonElement, subtextElement);
 
